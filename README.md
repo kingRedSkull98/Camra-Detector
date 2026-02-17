@@ -1,3 +1,3 @@
 # Camra-Detector
-Es un proyecto ola
+Es un proyecto ola XD
 
