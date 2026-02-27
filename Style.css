@@ -3,11 +3,6 @@ body {
     margin: 0; 
     padding: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    gap: 50px;
 }
 header {
     background-color: #221e1e;
