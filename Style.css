@@ -9,8 +9,9 @@ header {
     text-align: center;
 }
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    background-color: #050000;
+    list-style-type: 
+    padding: 20px;
     margin: 0;
 }
 nav li {
@@ -22,7 +23,7 @@ nav li {
     justify-content: space-between;
 }
 .card {
-    border: 1px solid #cccccc;
+    border: 1px solid #b90606;
     padding: 20px;
     width: 30%;
 }
