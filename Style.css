@@ -10,10 +10,10 @@ header {
     text-align: center;
 }
 nav ul {
-    background-color: #050000;
-    list-style-type:; 
-    padding: 20px;
-    margin: 100px;
+    background-color: ;
+    list-style-type: 
+    padding: 0;
+    margin: 0;
 }
 nav li {
     display: inline-block;
