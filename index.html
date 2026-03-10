@@ -3,65 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema inteligente de control de acceso vehicular por fotodetección en la Universidad Libre Seccional Cúcuta.">
+    <meta name="author" content="José David, Miguel Ángel, Rodrigo Rueda">
+    <meta name="keywords" content="control vehicular, visión artificial, placa, acceso, universidad libre">
     <title>Sistema de control de acceso vehicular por fotodetección</title>
     <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
+
     <header>
         <h1>Sistema de control de acceso vehicular por fotodetección</h1>
-        <img src="camara.jpeg" width="200" alt="Cámara del sistema">
+        <img src="camara.jpeg" width="200" alt="Cámara del sistema" usemap="#mapaCamera">
+
+        <!-- Tema 5: Mapa de imagen con áreas clicables -->
+        <map name="mapaCamera">
+            <area shape="rect" coords="0,0,100,100" href="https://www.unilibre.edu.co/cucuta/" target="_blank" alt="Sitio web Universidad Libre" title="Ir al sitio oficial">
+            <area shape="circle" coords="150,100,50" href="https://www.google.com/maps/search/Universidad+Libre+Seccional+C%C3%BAcuta" target="_blank" alt="Ver ubicación" title="Ver en Google Maps">
+        </map>
+
+        <!-- Tema 2: Navegación semántica -->
+        <nav>
+            <ul>
+                <li><a href="#descripcion">Inicio</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#vehiculos">Vehículos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#redes">Redes</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+
+        <!-- Cards con contenido real del proyecto -->
         <section class="featured">
             <div class="card">
-                <h3>Card 1</h3>
-                <p>Contenido de la tarjeta 1</p>
+                <h3>Visión Artificial</h3>
+                <p>Detección automática de placas vehiculares mediante algoritmos de procesamiento de imagen en tiempo real.</p>
             </div>
-
             <div class="card">
-                <h3>Card 2</h3>
-                <p>Contenido de la tarjeta 2</p>
+                <h3>Notificación WhatsApp</h3>
+                <p>Alertas automáticas vía chatbot de WhatsApp sobre entradas y salidas de vehículos registrados.</p>
+            </div>
+            <div class="card">
+                <h3>Control de Barrera</h3>
+                <p>Apertura automática de barreras para vehículos autorizados registrados en la base de datos.</p>
             </div>
         </section>
 
-        <section>
+        <!-- Tema 2/3: Descripción con formateo de texto -->
+        <section id="descripcion">
             <h2>Descripción</h2>
             <p>
-                <ins>Este sistema permite detectar automáticamente la placa de un vehículo.</ins>
+                <strong>Este sistema</strong> permite <em>detectar automáticamente</em> la placa de un vehículo usando <b>visión artificial</b>. 
+                Fue desarrollado para la <i>Universidad Libre Seccional Cúcuta</i>.
             </p>
+            <p>
+                <ins>Funcionalidad principal:</ins> Al detectar una placa registrada, el sistema <mark>abre la barrera automáticamente</mark> 
+                y envía una notificación. La versión actual es la <sup>1ª</sup> entrega del proyecto.
+            </p>
+            <hr>
         </section>
 
-        <section>
+        <!-- Tema 4: Listas ordenadas, desordenadas y de definición -->
+        <section id="caracteristicas">
+            <h2>Características del sistema</h2>
+
+            <h3>Características principales <small>(lista desordenada)</small></h3>
+            <ul>
+                <li>Detección de placas en tiempo real</li>
+                <li>Base de datos de vehículos autorizados</li>
+                <li>Apertura automática de barrera</li>
+                <li>Notificación vía WhatsApp</li>
+                <li>Interfaz web de administración</li>
+            </ul>
+
+            <h3>Pasos de funcionamiento <small>(lista ordenada)</small></h3>
+            <ol>
+                <li>La cámara captura la imagen del vehículo en la entrada</li>
+                <li>El algoritmo de visión artificial detecta y lee la placa</li>
+                <li>El sistema consulta la base de datos de vehículos registrados</li>
+                <li>Si la placa es autorizada, se abre la barrera automáticamente</li>
+                <li>Se registra la entrada/salida y se envía notificación por WhatsApp</li>
+            </ol>
+
+            <h3>Glosario técnico <small>(lista de definición)</small></h3>
+            <dl>
+                <dt><strong>Visión Artificial</strong></dt>
+                <dd>Tecnología que permite a las máquinas interpretar y analizar imágenes o videos.</dd>
+
+                <dt><strong>OCR</strong></dt>
+                <dd>Reconocimiento Óptico de Caracteres; extrae texto de imágenes, en este caso las placas.</dd>
+
+                <dt><strong>Chatbot</strong></dt>
+                <dd>Programa que simula una conversación; aquí envía notificaciones automáticas por WhatsApp.</dd>
+
+                <dt><strong>Barrera vehicular</strong></dt>
+                <dd>Dispositivo físico controlado electrónicamente para permitir o denegar el acceso de vehículos.</dd>
+            </dl>
+        </section>
+
+        <!-- Tema 6: Tabla de vehículos registrados -->
+        <section id="vehiculos">
+            <h2>Vehículos registrados</h2>
+            <p>A continuación se muestra la tabla de vehículos autorizados en el sistema:</p>
+            <table>
+                <tr>
+                    <th colspan="5">Registro de vehículos autorizados - Universidad Libre Cúcuta</th>
+                </tr>
+                <tr>
+                    <th>Placa</th>
+                    <th>Propietario</th>
+                    <th>Tipo de vehículo</th>
+                    <th>Dependencia</th>
+                    <th>Estado</th>
+                </tr>
+                <tr>
+                    <td>ABC123</td>
+                    <td>Carlos Pérez</td>
+                    <td>Automóvil</td>
+                    <td>Docentes</td>
+                    <td><strong>Autorizado</strong></td>
+                </tr>
+                <tr>
+                    <td>XYZ789</td>
+                    <td>María López</td>
+                    <td>Moto</td>
+                    <td>Administrativos</td>
+                    <td><strong>Autorizado</strong></td>
+                </tr>
+                <tr>
+                    <td>DEF456</td>
+                    <td>Juan García</td>
+                    <td>Camioneta</td>
+                    <td>Estudiantes</td>
+                    <td><em>Pendiente</em></td>
+                </tr>
+                <tr>
+                    <td>GHI321</td>
+                    <td>Ana Martínez</td>
+                    <td>Automóvil</td>
+                    <td>Docentes</td>
+                    <td><strong>Autorizado</strong></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Tema 7: Formulario completo con múltiples tipos de input -->
+        <section id="contacto">
             <h2>Registro manual de placa</h2>
             <form action="#" method="post">
-                <label for="placa">Placa:</label>
-                <input type="text" id="placa" name="placa" placeholder="Ej: ABC123">
-                <button type="submit">Registrar</button>
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Carlos Pérez" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Ej: correo@unilibre.edu.co" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="number" id="telefono" name="telefono" placeholder="Ej: 3001234567">
+
+                <label for="password">Contraseña de acceso:</label>
+                <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres">
+
+                <label for="placa">Placa del vehículo:</label>
+                <input type="text" id="placa" name="placa" placeholder="Ej: ABC123" required>
+
+                <label>Tipo de vehículo:</label>
+                <label><input type="radio" name="tipo" value="automovil"> Automóvil</label>
+                <label><input type="radio" name="tipo" value="moto"> Moto</label>
+                <label><input type="radio" name="tipo" value="camioneta"> Camioneta</label>
+
+                <label>Permisos de acceso:</label>
+                <label><input type="checkbox" name="permiso" value="entrada"> Entrada</label>
+                <label><input type="checkbox" name="permiso" value="salida"> Salida</label>
+                <label><input type="checkbox" name="permiso" value="nocturno"> Acceso nocturno</label>
+
+                <label for="mensaje">Observaciones:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escriba aquí información adicional sobre el vehículo o propietario..."></textarea>
+
+                <button type="submit">Registrar vehículo</button>
+                <button type="reset">Limpiar formulario</button>
             </form>
         </section>
 
-        <section>
+        <!-- Tema 5: Redes sociales con enlaces y atributos -->
+        <section id="redes">
             <h2>Redes sociales</h2>
             <p>Síguenos en los siguientes enlaces:</p>
-
-            <a href="https://www.facebook.com/UniLibreCucuta1/" target="_blank">
-                Facebook Universidad Libre Cúcuta
-            </a>
-            <br><br>
-
-            <a href="https://www.unilibre.edu.co/cucuta/" target="_blank">
-                Sitio web oficial
-            </a>
-            <br><br>
-
-            <a href="https://www.google.com/maps/search/Universidad+Libre+Seccional+C%C3%BAcuta" target="_blank">
-                Ver ubicación en Google Maps
-            </a>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/UniLibreCucuta1/" target="_blank" title="Visitar Facebook de la Universidad Libre Cúcuta" rel="noopener">
+                        📘 Facebook Universidad Libre Cúcuta
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.unilibre.edu.co/cucuta/" target="_blank" title="Sitio web oficial Universidad Libre Cúcuta" rel="noopener">
+                        🌐 Sitio web oficial
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/search/Universidad+Libre+Seccional+C%C3%BAcuta" target="_blank" title="Ver ubicación en Google Maps" rel="noopener">
+                        📍 Ver ubicación en Google Maps
+                    </a>
+                </li>
+            </ul>
         </section>
 
-        <section>
+        <!-- Tema 7: Iframe con Google Maps -->
+        <section id="ubicacion">
             <h2>Ubicación</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.8358089711883!2d-72.50140249172229!3d7.912214392078177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e664540a6ea196f%3A0xb1d0e71aebd40351!2sUniversidad%20Libre%20Seccional%20C%C3%BAcuta!5e0!3m2!1ses-419!2sco!4v1724602570625!5m2!1ses-419!2sco"
@@ -73,11 +225,13 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </section>
+
     </main>
 
     <footer>
-        <p>José David - Miguel Ángel - Rodrigo Rueda</p>
-        <p>&copy; 2026</p>
+        <p><strong>José David</strong> - <strong>Miguel Ángel</strong> - <strong>Rodrigo Rueda</strong></p>
+        <p>&copy; 2026 - Universidad Libre Seccional Cúcuta</p>
     </footer>
+
 </body>
 </html>

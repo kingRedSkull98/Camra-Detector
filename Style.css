@@ -26,6 +26,37 @@ header img {
     height: auto;
 }
 
+/* Navegación */
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    background-color: #b90606;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #8f0404;
+    text-decoration: none;
+}
+
 main {
     padding: 20px;
 }
@@ -69,28 +100,99 @@ section h2 {
     margin-top: 0;
 }
 
+section h3 {
+    color: #b90606;
+    margin-top: 20px;
+}
+
+/* Listas */
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li, ol li {
+    margin-bottom: 6px;
+}
+
+dl dt {
+    font-weight: bold;
+    color: #221e1e;
+    margin-top: 10px;
+}
+
+dl dd {
+    margin-left: 20px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
+table th {
+    background-color: #221e1e;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #fce8e8;
+}
+
+/* Formulario */
 form {
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 8px;
-    max-width: 400px;
+    max-width: 500px;
     margin: 20px 0;
 }
 
 form label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    margin-top: 12px;
     font-weight: bold;
     color: #221e1e;
 }
 
-form input {
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="password"],
+form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border: 1px solid #b90606;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: #b90606;
+}
+
+form textarea {
+    resize: vertical;
 }
 
 form button {
@@ -101,11 +203,20 @@ form button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+form button[type="reset"] {
+    background-color: #555;
 }
 
 form button:hover {
     background-color: #8f0404;
+}
+
+form button[type="reset"]:hover {
+    background-color: #333;
 }
 
 a {
@@ -123,6 +234,18 @@ iframe {
     width: 100%;
     max-width: 100%;
     border-radius: 8px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #b90606;
+    margin: 20px 0;
+}
+
+mark {
+    background-color: #ffd700;
+    padding: 0 4px;
+    border-radius: 3px;
 }
 
 footer {
@@ -158,5 +281,18 @@ footer p {
 
     header h1 {
         font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+
+    table th, table td {
+        padding: 8px 6px;
     }
 }
