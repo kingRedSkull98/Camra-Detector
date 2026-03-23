@@ -1,3 +1,6 @@
+/* ============================
+   RESET Y BASE
+============================ */
 * {
     box-sizing: border-box;
 }
@@ -12,7 +15,7 @@ body {
 }
 
 /* ============================
-   HEADER Y NAVEGACIÓN
+   ENCABEZADO
 ============================ */
 header {
     background-color: #221e1e;
@@ -22,23 +25,32 @@ header {
 }
 
 header h1 {
-    margin: 0 0 10px 0;
-    font-size: 2em;
+    margin: 10px 0 5px;
+    font-size: 1.9em;
 }
 
-.logo-unilibre {
-    max-width: 120px;
+header p {
+    margin: 0 0 10px;
+    font-size: 0.95em;
+    color: #ccc;
+}
+
+.logo {
+    max-width: 110px;
     height: auto;
     margin-bottom: 10px;
 }
 
 header img {
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     max-width: 100%;
     height: auto;
 }
 
+/* ============================
+   NAVEGACIÓN
+============================ */
 nav {
     margin-top: 15px;
 }
@@ -57,7 +69,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     background-color: #b90606;
-    padding: 7px 12px;
+    padding: 7px 13px;
     border-radius: 4px;
     font-weight: bold;
     font-size: 0.85em;
@@ -69,7 +81,7 @@ nav ul li a:hover {
 }
 
 /* ============================
-   MAIN Y SECCIONES
+   CONTENIDO PRINCIPAL
 ============================ */
 main {
     padding: 20px;
@@ -81,7 +93,7 @@ section {
     max-width: 1200px;
     margin: 20px auto;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 section h2 {
@@ -102,31 +114,34 @@ section h4 {
 }
 
 /* ============================
-   CARDS PRINCIPALES
+   TARJETAS RESUMEN
 ============================ */
-.featured {
+.cards-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
 }
 
 .card {
     border: 1px solid #b90606;
     padding: 20px;
-    width: 250px;
+    width: 240px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
     text-align: center;
 }
 
 .card h3 {
     color: #b90606;
     margin-top: 0;
-    font-size: 1.1em;
+    font-size: 1.05em;
 }
 
 /* ============================
@@ -183,55 +198,43 @@ table tr:hover {
     background-color: #fce8e8;
 }
 
-/* Estados en tablas */
-.estado-autorizado {
-    color: #2e7d32;
-}
-
-.estado-inhabilitado {
-    color: #b71c1c;
-}
-
-.estado-pendiente {
-    color: #e65100;
-}
-
-.estado-no-registrado {
-    color: #6a1a6a;
-    font-weight: bold;
-}
+/* Estados en tabla */
+.autorizado    { color: #2e7d32; font-weight: bold; }
+.inhabilitado  { color: #b71c1c; font-weight: bold; }
+.pendiente     { color: #e65100; font-weight: bold; }
+.no-registrado { color: #6a1a6a; font-weight: bold; }
 
 /* ============================
    FORMULARIOS
 ============================ */
 form {
-    background-color: #f0f0f0;
+    background-color: #f7f7f7;
     padding: 20px;
     border-radius: 8px;
-    max-width: 600px;
-    margin: 20px 0;
+    max-width: 580px;
+    margin: 15px 0;
 }
 
 form h3 {
-    margin-top: 10px;
     border-bottom: 2px solid #b90606;
     padding-bottom: 5px;
+    margin-top: 15px;
 }
 
 form label {
     display: block;
-    margin-bottom: 4px;
     margin-top: 12px;
+    margin-bottom: 4px;
     font-weight: bold;
     color: #221e1e;
 }
 
-form label.terminos-label {
+label.radio-label {
     display: flex;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: center;
+    gap: 6px;
     font-weight: normal;
-    margin-top: 10px;
+    margin-top: 6px;
     cursor: pointer;
 }
 
@@ -244,26 +247,24 @@ form textarea,
 form select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     border: 1px solid #b90606;
     border-radius: 4px;
-    box-sizing: border-box;
     background-color: white;
     font-size: 0.95em;
 }
 
 form input[type="file"] {
+    width: 100%;
     padding: 8px;
     border: 2px dashed #b90606;
     border-radius: 4px;
     background-color: #fff3f3;
-    width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 form input[type="radio"],
 form input[type="checkbox"] {
-    margin-right: 6px;
     accent-color: #b90606;
 }
 
@@ -271,16 +272,22 @@ form textarea {
     resize: vertical;
 }
 
+.botones {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 form button {
     background-color: #b90606;
     color: white;
-    padding: 12px 24px;
+    padding: 11px 22px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 15px;
-    margin-top: 12px;
-    margin-right: 10px;
+    font-size: 0.95em;
+    font-weight: bold;
     transition: background-color 0.2s;
 }
 
@@ -296,14 +303,34 @@ form button[type="reset"]:hover {
     background-color: #333;
 }
 
-form button.btn-danger {
+form button.btn-rojo {
     background-color: #7b0000;
 }
 
-form button.btn-danger:hover {
+form button.btn-rojo:hover {
     background-color: #4a0000;
 }
 
+/* ============================
+   TÉRMINOS Y CONDICIONES
+============================ */
+.terminos-box {
+    background-color: #fff3f3;
+    border: 1px solid #b90606;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 0.92em;
+}
+
+.terminos-box p {
+    margin: 0 0 6px;
+    font-weight: bold;
+}
+
+/* ============================
+   NOTA INFORMATIVA
+============================ */
 .nota {
     background-color: #fff8e1;
     border-left: 4px solid #f9a825;
@@ -314,26 +341,9 @@ form button.btn-danger:hover {
 }
 
 /* ============================
-   TÉRMINOS Y CONDICIONES
+   PANELES ADMIN Y SEGURIDAD
 ============================ */
-.terminos-box {
-    background-color: #fff3f3;
-    border: 1px solid #b90606;
-    border-radius: 6px;
-    padding: 15px 20px;
-    margin: 15px 0;
-    font-size: 0.92em;
-}
-
-.terminos-box ul {
-    margin: 8px 0 0 0;
-    padding-left: 20px;
-}
-
-/* ============================
-   PANEL ADMINISTRADOR Y SEGURIDAD
-============================ */
-.admin-card {
+.panel-card {
     background-color: #fafafa;
     border: 1px solid #ddd;
     border-left: 5px solid #b90606;
@@ -342,72 +352,72 @@ form button.btn-danger:hover {
     margin: 20px 0;
 }
 
-.admin-card h3 {
+.panel-card h3 {
     margin-top: 0;
     color: #221e1e;
 }
 
-.seguridad-card {
+.panel-seguridad {
     border-left-color: #e65100;
 }
 
-.seguridad-card h3 {
+.panel-seguridad h3 {
     color: #e65100;
 }
 
 /* ============================
-   NOTIFICACIONES WHATSAPP
+   WHATSAPP
 ============================ */
-.whatsapp-preview {
+.whatsapp-demo {
     background-color: #e8f5e9;
     border-radius: 8px;
-    padding: 15px;
+    padding: 16px;
 }
 
-.mensaje-whatsapp {
+.burbuja-whatsapp {
     background-color: #dcf8c6;
     border-radius: 12px;
     padding: 15px 20px;
-    max-width: 380px;
+    max-width: 360px;
     border: 1px solid #b2dfdb;
-    font-size: 0.95em;
+    font-size: 0.93em;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 10px 0 20px 0;
+    margin: 10px 0 20px;
 }
 
-.mensaje-whatsapp p {
+.burbuja-whatsapp p {
     margin: 4px 0;
 }
 
 /* ============================
-   ESTADÍSTICAS / REPORTES
+   ESTADÍSTICAS
 ============================ */
-.stats-grid {
+.stats {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 15px;
 }
 
-.stat-card {
+.stat {
     background-color: #221e1e;
     color: white;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     flex: 1;
-    min-width: 130px;
+    min-width: 120px;
 }
 
-.stat-card h3 {
-    font-size: 2.5em;
-    margin: 0 0 5px 0;
+.stat h3 {
+    font-size: 2.4em;
+    margin: 0 0 5px;
     color: #f7c5c5;
 }
 
-.stat-card p {
+.stat p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 0.88em;
 }
 
 /* ============================
@@ -446,7 +456,7 @@ mark {
 }
 
 /* ============================
-   FOOTER
+   PIE DE PÁGINA
 ============================ */
 footer {
     background-color: #221e1e;
@@ -458,13 +468,23 @@ footer {
 
 footer p {
     margin: 5px 0;
+    font-size: 0.95em;
 }
 
 /* ============================
    RESPONSIVE MÓVIL
 ============================ */
 @media (max-width: 768px) {
-    .featured {
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-grid {
         flex-direction: column;
         align-items: center;
     }
@@ -478,31 +498,27 @@ footer p {
     }
 
     iframe {
-        height: 300px;
-    }
-
-    header h1 {
-        font-size: 1.4em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+        height: 280px;
     }
 
     table {
         font-size: 0.8em;
     }
 
-    table th, table td {
+    table th,
+    table td {
         padding: 8px 6px;
     }
 
-    .stats-grid {
+    .stats {
         flex-direction: column;
     }
 
-    .admin-card {
+    .panel-card {
         padding: 15px;
+    }
+
+    .botones {
+        flex-direction: column;
     }
 }
