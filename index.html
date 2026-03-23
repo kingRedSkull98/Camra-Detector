@@ -1,48 +1,648 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>sistema de control de acceso vehicular por fotodeteccion</title>
-<link rel="stylesheet" href="Style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema inteligente de control de acceso vehicular por fotodetección en la Universidad Libre Seccional Cúcuta.">
+    <meta name="author" content="José David Sánchez, Miguel Ángel Sayago, Rodrigo Rueda Cañas">
+    <meta name="keywords" content="control vehicular, visión artificial, placa, acceso, universidad libre">
+    <title>Sistema de Control de Acceso Vehicular - UniLibre Cúcuta</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
 
 <body>
-    <header><!--encabezado-->
-<h1> </b>sistema de control de acceso vehicular por fotodeteccion</h1>
-<img src= "camara.jpeg" width="200 alt="Mi foto>
+
+    <header>
+        <img src="libre.webp" alt="Logo Universidad Libre Cúcuta" class="logo-unilibre">
+        <h1>Sistema de Control de Acceso Vehicular por Fotodetección</h1>
+        <img src="camara.jpeg" width="200" alt="Cámara del sistema" usemap="#mapaCamera">
+
+        <map name="mapaCamera">
+            <area shape="rect" coords="0,0,100,100" href="https://www.unilibre.edu.co/cucuta/" target="_blank" alt="Sitio web Universidad Libre" title="Ir al sitio oficial">
+            <area shape="circle" coords="150,100,50" href="https://www.google.com/maps/search/Universidad+Libre+Seccional+C%C3%BAcuta" target="_blank" alt="Ver ubicación" title="Ver en Google Maps">
+        </map>
+
+        <nav>
+            <ul>
+                <li><a href="#descripcion">Inicio</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#registro-usuario">Registro Usuario</a></li>
+                <li><a href="#vehiculos">Vehículos</a></li>
+                <li><a href="#administrador">Administrador</a></li>
+                <li><a href="#seguridad">Seguridad</a></li>
+                <li><a href="#eventos">Registro Eventos</a></li>
+                <li><a href="#notificaciones">Notificaciones</a></li>
+                <li><a href="#reportes">Reportes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <main>
 
-<main><!--contenido principal-->
-  <section class="featured">
-        <h2>Destacados</h2>
-        <div class="card">
-            <h3> card 1</h3>
-            <p> contenido de la tarjeta 1</p>
-        </div>
-        <div class="card">
-            <h3> card 2</h3>
-            <p> conteido de la tarjeta 2</p>
-        </div>
-    </section>
+        <!-- Cards resumen del proyecto -->
+        <section class="featured">
+            <div class="card">
+                <h3>🎥 Visión Artificial</h3>
+                <p>Detección automática de placas vehiculares mediante algoritmos de procesamiento de imagen en tiempo real. (RU-SI-01, 02, 03)</p>
+            </div>
+            <div class="card">
+                <h3>💬 Notificación WhatsApp</h3>
+                <p>Alertas automáticas vía chatbot de WhatsApp sobre entradas y salidas de vehículos registrados. (RU-SI-10)</p>
+            </div>
+            <div class="card">
+                <h3>🚧 Control de Barrera</h3>
+                <p>Apertura automática de barreras para vehículos autorizados registrados en la base de datos. (RU-SI-04, 06)</p>
+            </div>
+            <div class="card">
+                <h3>🛡️ Seguridad</h3>
+                <p>Registro y gestión de vehículos no autorizados con notificación al personal de seguridad. (RU-ED-01, 02)</p>
+            </div>
+        </section>
 
-<section><!--seccion 1-->
+        <!-- Descripción general -->
+        <section id="descripcion">
+            <h2>Descripción del Sistema</h2>
+            <p>
+                <strong>Este sistema</strong> permite <em>detectar automáticamente</em> la placa de un vehículo usando <b>visión artificial</b>.
+                Fue desarrollado para la <i>Universidad Libre Seccional Cúcuta</i>.
+            </p>
+            <p>
+                <ins>Funcionalidad principal:</ins> Al detectar una placa registrada, el sistema <mark>abre la barrera automáticamente</mark>
+                y envía una notificación por WhatsApp al propietario. La versión actual es la <sup>2ª</sup> entrega del proyecto.
+            </p>
+            <hr>
+        </section>
 
-    <h2> Descripcion</h2>
-    <p><!--parrafo-->
-<ins>Este sistema permite detectar automáticamente la placa de un vehículo.</ins>
-    </p>
-</section>
-<h2>registro manual de placa</h2>
+        <!-- Características y pasos de funcionamiento -->
+        <section id="caracteristicas">
+            <h2>Características del Sistema</h2>
 
-<form ><!--formulario para ingresar datos-->
-       <label>placa:</label><!--espacio donde va a escribir -->
-       <input type="text" placeholder="Ej: ABC123"> 
-      <!--input = ingresar datos
-      type="text" define el dato 
-      placeholder=" " espacio gris como guia-->
-      <button type="submit">registro </button>
-</form>
-<footer> Jose david- miguel angel- rodrigo rueda</footer>
-<p>&copy; 2026</p>
-<section>
-    
+            <h3>Características principales</h3>
+            <ul>
+                <li>Detección de placas en tiempo real (RU-SI-01, RU-SI-02)</li>
+                <li>Análisis y reconocimiento de texto OCR en placas (RU-SI-03)</li>
+                <li>Verificación de autorización en base de datos (RU-SI-04)</li>
+                <li>Apertura automática de barrera para autorizados (RU-SI-06)</li>
+                <li>Registro de todos los eventos de acceso con foto, fecha y hora (RU-SI-05)</li>
+                <li>Detección y registro de vehículos no autorizados (RU-SI-07, RU-SI-08)</li>
+                <li>Registro de placas no encontradas en la base de datos (RU-SI-11)</li>
+                <li>Notificación vía WhatsApp al usuario registrado (RU-SI-10)</li>
+                <li>Carga masiva de usuarios por CSV o XLS (RU-SI-13, RU-AD-03)</li>
+                <li>Registro individual de usuarios (RU-SI-14)</li>
+                <li>Interfaz web de administración (RU-AD-01, RU-AD-02)</li>
+            </ul>
+
+            <h3>Pasos de funcionamiento</h3>
+            <ol>
+                <li>La cámara captura la imagen del vehículo en la entrada o salida (RU-SI-01)</li>
+                <li>El algoritmo de visión artificial detecta y lee la placa (RU-SI-02, RU-SI-03)</li>
+                <li>El sistema consulta la base de datos de vehículos registrados (RU-SI-04)</li>
+                <li>Si la placa es autorizada, se abre la barrera automáticamente (RU-SI-06)</li>
+                <li>Si la placa no está registrada o no tiene permisos, se alerta al personal de seguridad (RU-SI-07, RU-ED-01)</li>
+                <li>Se registra el evento con placa, foto, fecha, hora y tipo de movimiento (RU-SI-05, RU-SI-08)</li>
+                <li>Se envía notificación por WhatsApp al propietario del vehículo (RU-SI-10)</li>
+            </ol>
+
+            <h3>Glosario del sistema</h3>
+            <dl>
+                <dt>Placa autorizada</dt>
+                <dd>Vehículo registrado con permisos vigentes en la base de datos.</dd>
+                <dt>Placa no autorizada</dt>
+                <dd>Vehículo que no está registrado o cuyo permiso ha expirado.</dd>
+                <dt>Evento de acceso</dt>
+                <dd>Registro de cada entrada o salida con fecha, hora, imagen y estado.</dd>
+                <dt>Chatbot WhatsApp</dt>
+                <dd>Bot que envía notificaciones automáticas al usuario cuando su vehículo ingresa o sale.</dd>
+            </dl>
+        </section>
+
+        <!-- RU-US-01, RU-US-02, RU-US-03: Registro de usuario del parqueadero -->
+        <section id="registro-usuario">
+            <h2>Registro de Usuario del Parqueadero</h2>
+            <p>Los estudiantes, profesores y administrativos deben registrar sus datos personales y su vehículo para acceder al parqueadero. (RU-US-01, RU-US-02, RU-US-03)</p>
+
+            <form action="#" method="post" id="form-registro-usuario">
+                <h3>Datos personales (RU-US-01)</h3>
+
+                <label for="cedula">Cédula de ciudadanía: *</label>
+                <input type="text" id="cedula" name="cedula" placeholder="Ej: 1090123456" required pattern="[0-9]{6,12}" title="Solo números, entre 6 y 12 dígitos">
+
+                <label for="nombre-completo">Nombre completo: *</label>
+                <input type="text" id="nombre-completo" name="nombre" placeholder="Ej: Carlos Pérez Gómez" required>
+
+                <label for="apellidos">Apellidos: *</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Ej: Pérez Gómez" required>
+
+                <label for="email-usuario">Correo electrónico institucional: *</label>
+                <input type="email" id="email-usuario" name="email" placeholder="Ej: cperez@unilibre.edu.co" required>
+
+                <label for="celular-whatsapp">Número de WhatsApp: *</label>
+                <input type="number" id="celular-whatsapp" name="celular" placeholder="Ej: 3001234567" required>
+
+                <label>Tipo de usuario: *</label>
+                <label><input type="radio" name="tipo-usuario" value="estudiante" required> Estudiante</label>
+                <label><input type="radio" name="tipo-usuario" value="docente"> Docente</label>
+                <label><input type="radio" name="tipo-usuario" value="administrativo"> Administrativo</label>
+                <label><input type="radio" name="tipo-usuario" value="otro"> Otro</label>
+
+                <label for="programa">Programa académico / Dependencia:</label>
+                <input type="text" id="programa" name="programa" placeholder="Ej: Ingeniería de Sistemas">
+
+                <label for="fecha-inicio">Fecha de inicio de acceso: *</label>
+                <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+
+                <label for="fecha-fin">Fecha fin de acceso: *</label>
+                <input type="date" id="fecha-fin" name="fecha-fin" required>
+
+                <h3>Datos del vehículo (RU-US-03)</h3>
+
+                <label for="placa-registro">Placa del vehículo: *</label>
+                <input type="text" id="placa-registro" name="placa" placeholder="Ej: ABC123" required maxlength="7" style="text-transform:uppercase">
+
+                <label for="marca">Marca: *</label>
+                <input type="text" id="marca" name="marca" placeholder="Ej: Chevrolet" required>
+
+                <label for="linea">Línea / Modelo: *</label>
+                <input type="text" id="linea" name="linea" placeholder="Ej: Spark GT">
+
+                <label for="modelo-año">Año del modelo: *</label>
+                <input type="number" id="modelo-año" name="modelo" placeholder="Ej: 2020" min="1990" max="2026" required>
+
+                <label>Clase de vehículo: *</label>
+                <label><input type="radio" name="clase" value="automovil" required> Automóvil</label>
+                <label><input type="radio" name="clase" value="moto"> Motocicleta</label>
+                <label><input type="radio" name="clase" value="camioneta"> Camioneta</label>
+                <label><input type="radio" name="clase" value="bicicleta"> Bicicleta eléctrica</label>
+
+                <!-- RU-US-02: Términos y condiciones -->
+                <h3>Términos y condiciones (RU-US-02)</h3>
+                <div class="terminos-box">
+                    <p><strong>Al registrarse, acepta que:</strong></p>
+                    <ul>
+                        <li>Sus datos personales y de vehículo serán almacenados en la base de datos de la Universidad Libre Seccional Cúcuta.</li>
+                        <li>Se capturarán imágenes fotográficas de su vehículo cada vez que ingrese o salga del campus.</li>
+                        <li>Recibirá notificaciones automáticas vía WhatsApp sobre los eventos de acceso de su vehículo.</li>
+                        <li>El acceso al parqueadero podrá ser revocado por la administración en cualquier momento.</li>
+                        <li>La información solo será usada para fines de seguridad y control de acceso.</li>
+                    </ul>
+                </div>
+                <label class="terminos-label">
+                    <input type="checkbox" name="terminos" required>
+                    Acepto los términos y condiciones para registrar mi vehículo *
+                </label>
+
+                <button type="submit">✅ Registrar usuario y vehículo</button>
+                <button type="reset">🔄 Limpiar formulario</button>
+            </form>
+        </section>
+
+        <!-- Tabla de vehículos registrados -->
+        <section id="vehiculos">
+            <h2>Vehículos Registrados en el Sistema</h2>
+            <p>A continuación se muestra la tabla de vehículos autorizados en el sistema:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="7">Registro de Vehículos Autorizados - Universidad Libre Cúcuta</th>
+                    </tr>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Propietario</th>
+                        <th>Tipo</th>
+                        <th>Marca / Modelo</th>
+                        <th>Dependencia</th>
+                        <th>Vigencia</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ABC123</td>
+                        <td>Carlos Pérez</td>
+                        <td>Automóvil</td>
+                        <td>Chevrolet Spark</td>
+                        <td>Docentes</td>
+                        <td>31/12/2026</td>
+                        <td class="estado-autorizado"><strong>✅ Autorizado</strong></td>
+                    </tr>
+                    <tr>
+                        <td>XYZ789</td>
+                        <td>María López</td>
+                        <td>Moto</td>
+                        <td>Honda CB190</td>
+                        <td>Administrativos</td>
+                        <td>30/06/2026</td>
+                        <td class="estado-autorizado"><strong>✅ Autorizado</strong></td>
+                    </tr>
+                    <tr>
+                        <td>DEF456</td>
+                        <td>Juan García</td>
+                        <td>Camioneta</td>
+                        <td>Renault Duster</td>
+                        <td>Estudiantes</td>
+                        <td>15/03/2026</td>
+                        <td class="estado-pendiente"><em>⏳ Pendiente</em></td>
+                    </tr>
+                    <tr>
+                        <td>GHI321</td>
+                        <td>Ana Martínez</td>
+                        <td>Automóvil</td>
+                        <td>Mazda 2</td>
+                        <td>Docentes</td>
+                        <td>31/12/2026</td>
+                        <td class="estado-autorizado"><strong>✅ Autorizado</strong></td>
+                    </tr>
+                    <tr>
+                        <td>JKL654</td>
+                        <td>Pedro Sánchez</td>
+                        <td>Moto</td>
+                        <td>Yamaha FZ</td>
+                        <td>Estudiantes</td>
+                        <td>01/01/2026</td>
+                        <td class="estado-inhabilitado"><strong>🚫 Inhabilitado</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- RU-AD-01, 02, 03, 21: Panel de Administrador -->
+        <section id="administrador">
+            <h2>Panel de Administrador</h2>
+            <p>Módulo de gestión exclusivo para el administrador del sistema. Permite habilitar, inhabilitar y administrar vehículos y usuarios. (RU-AD-01, RU-AD-02, RU-AD-03, RU-AD-21)</p>
+
+            <!-- RU-AD-01: Habilitar vehículo -->
+            <div class="admin-card">
+                <h3>➕ Habilitar Vehículo (RU-AD-01)</h3>
+                <p>Agregar un nuevo vehículo autorizado a la base de datos.</p>
+                <form action="#" method="post">
+                    <label for="admin-placa">Placa del vehículo:</label>
+                    <input type="text" id="admin-placa" name="placa" placeholder="Ej: MNO987" required maxlength="7">
+
+                    <label for="admin-cedula">Cédula del propietario:</label>
+                    <input type="text" id="admin-cedula" name="cedula" placeholder="Ej: 1090123456" required>
+
+                    <label for="admin-vigencia">Fecha de vigencia del permiso:</label>
+                    <input type="date" id="admin-vigencia" name="vigencia" required>
+
+                    <button type="submit">✅ Habilitar vehículo</button>
+                </form>
+            </div>
+
+            <!-- RU-AD-02: Inhabilitar vehículo -->
+            <div class="admin-card">
+                <h3>🚫 Inhabilitar Vehículo (RU-AD-02)</h3>
+                <p>Revocar el acceso de un vehículo registrado en el sistema.</p>
+                <form action="#" method="post">
+                    <label for="inhab-placa">Placa del vehículo a inhabilitar:</label>
+                    <input type="text" id="inhab-placa" name="placa" placeholder="Ej: JKL654" required maxlength="7">
+
+                    <label for="inhab-motivo">Motivo de inhabilitación:</label>
+                    <textarea id="inhab-motivo" name="motivo" rows="3" placeholder="Ej: Venció el período académico..."></textarea>
+
+                    <button type="submit" class="btn-danger">🚫 Inhabilitar vehículo</button>
+                </form>
+            </div>
+
+            <!-- RU-AD-03 / RU-SI-13: Carga masiva de usuarios por CSV o XLS -->
+            <div class="admin-card">
+                <h3>📂 Carga Masiva de Usuarios (RU-AD-03 / RU-SI-13)</h3>
+                <p>Cargar un archivo en formato <strong>CSV o XLS</strong> con los datos de los usuarios. El sistema validará la estructura, el formato y los campos obligatorios antes de procesar el archivo.</p>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <label for="archivo-csv">Seleccione el archivo (CSV o XLS):</label>
+                    <input type="file" id="archivo-csv" name="archivo" accept=".csv, .xls, .xlsx" required>
+
+                    <p class="nota">📋 <strong>Campos requeridos en el archivo:</strong> Cédula, Nombre completo, Tipo de usuario, Programa/Dependencia, Placa, Fecha inicio, Fecha fin.</p>
+
+                    <button type="submit">📤 Cargar archivo</button>
+                </form>
+
+                <!-- RU-SI-14: Cargue individual -->
+                <h3>👤 Registro Individual (RU-SI-14)</h3>
+                <p>Registrar un único usuario directamente desde el panel sin necesidad de archivo.</p>
+                <form action="#" method="post">
+                    <label for="ind-cedula">Cédula:</label>
+                    <input type="text" id="ind-cedula" name="cedula" placeholder="Ej: 1090999888" required>
+
+                    <label for="ind-nombre">Nombre completo:</label>
+                    <input type="text" id="ind-nombre" name="nombre" placeholder="Ej: Luis Rueda" required>
+
+                    <label for="ind-tipo">Tipo de usuario:</label>
+                    <select id="ind-tipo" name="tipo">
+                        <option value="">-- Seleccione --</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="docente">Docente</option>
+                        <option value="administrativo">Administrativo</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <label for="ind-placa">Placa:</label>
+                    <input type="text" id="ind-placa" name="placa" placeholder="Ej: PQR111" required maxlength="7">
+
+                    <button type="submit">✅ Registrar individualmente</button>
+                </form>
+            </div>
+
+            <!-- RU-AD-21: Generar reporte -->
+            <div class="admin-card">
+                <h3>📊 Generar Reporte (RU-AD-21)</h3>
+                <p>Generar informes de entradas/salidas por rango de fechas.</p>
+                <form action="#" method="get">
+                    <label for="reporte-desde">Fecha desde:</label>
+                    <input type="date" id="reporte-desde" name="desde" required>
+
+                    <label for="reporte-hasta">Fecha hasta:</label>
+                    <input type="date" id="reporte-hasta" name="hasta" required>
+
+                    <label>Formato de reporte:</label>
+                    <label><input type="radio" name="formato" value="pdf"> PDF</label>
+                    <label><input type="radio" name="formato" value="excel"> Excel</label>
+                    <label><input type="radio" name="formato" value="pantalla" checked> Ver en pantalla</label>
+
+                    <button type="submit">📊 Generar reporte</button>
+                </form>
+
+                <!-- Tabla de reporte de ejemplo -->
+                <h4>Vista previa del reporte</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>Propietario</th>
+                            <th>Tipo</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Movimiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ABC123</td>
+                            <td>Carlos Pérez</td>
+                            <td>Docente</td>
+                            <td>22/03/2026</td>
+                            <td>07:30</td>
+                            <td>🟢 Entrada</td>
+                        </tr>
+                        <tr>
+                            <td>XYZ789</td>
+                            <td>María López</td>
+                            <td>Administrativo</td>
+                            <td>22/03/2026</td>
+                            <td>08:15</td>
+                            <td>🟢 Entrada</td>
+                        </tr>
+                        <tr>
+                            <td>ABC123</td>
+                            <td>Carlos Pérez</td>
+                            <td>Docente</td>
+                            <td>22/03/2026</td>
+                            <td>17:45</td>
+                            <td>🔴 Salida</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- RU-ED-01, RU-ED-02: Panel de Empresa de Seguridad -->
+        <section id="seguridad">
+            <h2>Panel de Seguridad</h2>
+            <p>Módulo para el personal de seguridad. Permite autorizar ingresos de vehículos no registrados y registrar personas no autorizadas. (RU-ED-01, RU-ED-02)</p>
+
+            <!-- RU-ED-01: Autorizar vehículo no registrado -->
+            <div class="admin-card seguridad-card">
+                <h3>🚗 Autorizar Ingreso No Registrado (RU-ED-01)</h3>
+                <p>El funcionario de seguridad puede autorizar manualmente la entrada de un vehículo que no esté en el sistema.</p>
+                <form action="#" method="post">
+                    <label for="seg-placa">Placa del vehículo:</label>
+                    <input type="text" id="seg-placa" name="placa" placeholder="Ej: STU222" required maxlength="7">
+
+                    <label for="seg-motivo-aut">Motivo de autorización:</label>
+                    <textarea id="seg-motivo-aut" name="motivo" rows="2" placeholder="Ej: Visita autorizada por Rectoría..."></textarea>
+
+                    <label for="seg-guardia">Nombre del guardia que autoriza:</label>
+                    <input type="text" id="seg-guardia" name="guardia" placeholder="Ej: Andrés Morales" required>
+
+                    <button type="submit">🔓 Autorizar ingreso</button>
+                </form>
+            </div>
+
+            <!-- RU-ED-02: Registro de persona no autorizada -->
+            <div class="admin-card seguridad-card">
+                <h3>📝 Registrar Persona No Autorizada (RU-ED-02)</h3>
+                <p>Registrar en el sistema los datos de la persona no autorizada para permitirle ingresar de forma controlada.</p>
+                <form action="#" method="post">
+                    <label for="noauth-nombre">Nombre completo:</label>
+                    <input type="text" id="noauth-nombre" name="nombre" placeholder="Ej: Visitante Externo" required>
+
+                    <label for="noauth-cedula">Cédula o documento:</label>
+                    <input type="text" id="noauth-cedula" name="cedula" placeholder="Ej: 1090000001" required>
+
+                    <label for="noauth-placa">Placa del vehículo:</label>
+                    <input type="text" id="noauth-placa" name="placa" placeholder="Ej: STU222" required maxlength="7">
+
+                    <label for="noauth-destino">Dependencia a visitar:</label>
+                    <input type="text" id="noauth-destino" name="destino" placeholder="Ej: Rectoría, Sistemas...">
+
+                    <label for="noauth-obs">Observaciones:</label>
+                    <textarea id="noauth-obs" name="obs" rows="2" placeholder="Ej: Proveedor de mantenimiento..."></textarea>
+
+                    <button type="submit">📝 Registrar persona</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- RU-SI-05, 07, 08, 11, 12: Registro de Eventos -->
+        <section id="eventos">
+            <h2>Registro de Eventos de Acceso</h2>
+            <p>Historial completo de todos los eventos de entrada y salida, incluyendo vehículos autorizados, no autorizados y placas no registradas. (RU-SI-05, RU-SI-07, RU-SI-08, RU-SI-11, RU-SI-12)</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="7">Historial de Eventos - Universidad Libre Cúcuta</th>
+                    </tr>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Movimiento</th>
+                        <th>Estado</th>
+                        <th>Evidencia Fotográfica</th>
+                        <th>WhatsApp Enviado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ABC123</td>
+                        <td>22/03/2026</td>
+                        <td>07:30</td>
+                        <td>Entrada</td>
+                        <td class="estado-autorizado">✅ Autorizado</td>
+                        <td>📷 foto_001.jpg</td>
+                        <td>✅ Sí</td>
+                    </tr>
+                    <tr>
+                        <td>JKL654</td>
+                        <td>22/03/2026</td>
+                        <td>08:02</td>
+                        <td>Entrada</td>
+                        <td class="estado-inhabilitado">🚫 Sin permiso vigente</td>
+                        <td>📷 foto_002.jpg</td>
+                        <td>⚠️ Alerta enviada</td>
+                    </tr>
+                    <tr>
+                        <td>ZZZ999</td>
+                        <td>22/03/2026</td>
+                        <td>09:15</td>
+                        <td>Entrada</td>
+                        <td class="estado-no-registrado">❌ Placa no registrada</td>
+                        <td>📷 foto_003.jpg</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>STU222</td>
+                        <td>22/03/2026</td>
+                        <td>10:00</td>
+                        <td>Entrada</td>
+                        <td class="estado-pendiente">🔓 Autorizado por Seguridad</td>
+                        <td>📷 foto_004.jpg</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>XYZ789</td>
+                        <td>22/03/2026</td>
+                        <td>17:00</td>
+                        <td>Salida</td>
+                        <td class="estado-autorizado">✅ Autorizado</td>
+                        <td>📷 foto_005.jpg</td>
+                        <td>✅ Sí</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- RU-SI-10: Notificaciones WhatsApp -->
+        <section id="notificaciones">
+            <h2>Notificaciones por WhatsApp</h2>
+            <p>El sistema envía notificaciones automáticas al número de WhatsApp registrado cada vez que se detecta el ingreso o salida de un vehículo. (RU-SI-10)</p>
+
+            <div class="whatsapp-preview">
+                <h3>📱 Ejemplo de notificación enviada</h3>
+                <div class="mensaje-whatsapp">
+                    <p><strong>🚗 UniLibre Cúcuta - Control Vehicular</strong></p>
+                    <p>📅 <strong>Fecha:</strong> 22/03/2026</p>
+                    <p>⏰ <strong>Hora:</strong> 07:30 AM</p>
+                    <p>🚘 <strong>Placa:</strong> ABC123</p>
+                    <p>✅ <strong>Evento:</strong> Ingreso autorizado al campus</p>
+                    <p>📷 Foto del vehículo adjunta.</p>
+                    <p><em>Universidad Libre Seccional Cúcuta</em></p>
+                </div>
+
+                <h3>Historial de Notificaciones Enviadas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>Propietario</th>
+                            <th>Celular</th>
+                            <th>Mensaje</th>
+                            <th>Fecha/Hora</th>
+                            <th>Estado envío</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ABC123</td>
+                            <td>Carlos Pérez</td>
+                            <td>300 123 4567</td>
+                            <td>Ingreso al campus</td>
+                            <td>22/03/2026 07:30</td>
+                            <td>✅ Enviado</td>
+                        </tr>
+                        <tr>
+                            <td>XYZ789</td>
+                            <td>María López</td>
+                            <td>311 987 6543</td>
+                            <td>Salida del campus</td>
+                            <td>22/03/2026 17:00</td>
+                            <td>✅ Enviado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Reportes de acceso -->
+        <section id="reportes">
+            <h2>Reportes de Acceso (RU-AD-21)</h2>
+            <p>Estadísticas generales de acceso vehicular en el campus.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>150</h3>
+                    <p>Vehículos registrados</p>
+                </div>
+                <div class="stat-card">
+                    <h3>47</h3>
+                    <p>Ingresos hoy</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5</h3>
+                    <p>Accesos no autorizados</p>
+                </div>
+                <div class="stat-card">
+                    <h3>142</h3>
+                    <p>Notificaciones enviadas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redes sociales -->
+        <section id="redes">
+            <h2>Redes Sociales</h2>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/UniLibreCucuta1/" target="_blank" rel="noopener">
+                        📘 Facebook Universidad Libre Cúcuta
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.unilibre.edu.co/cucuta/" target="_blank" rel="noopener">
+                        🌐 Sitio web oficial
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/kingRedSkull98/Camra-Detector" target="_blank" rel="noopener">
+                        💻 Repositorio GitHub del proyecto
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Ubicación -->
+        <section id="ubicacion">
+            <h2>Ubicación</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.8358089711883!2d-72.50140249172229!3d7.912214392078177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e664540a6ea196f%3A0xb1d0e71aebd40351!2sUniversidad%20Libre%20Seccional%20C%C3%BAcuta!5e0!3m2!1ses-419!2sco!4v1724602570625!5m2!1ses-419!2sco"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>José David Sánchez Ramos</strong> · <strong>Miguel Ángel Sayago Rozo</strong> · <strong>Rodrigo Rueda Cañas</strong></p>
+        <p>🎓 Universidad Libre Seccional Cúcuta &copy; 2026</p>
+        <p>Sistema de Control de Acceso Vehicular por Fotodetección</p>
+    </footer>
+
+</body>
+</html>
