@@ -1,0 +1,168 @@
+<!-- SECCIÓN 3: REGISTRO DE USUARIO -->
+        <section id="registro-usuario">
+            <h2>Registro de Usuario del Parqueadero</h2>
+            <p>
+                Los estudiantes, docentes y administrativos deben registrar sus datos personales
+                y los datos de su vehículo para acceder al parqueadero universitario.
+            </p>
+
+            <form action="#" method="post">
+
+                <h3>Datos personales</h3>
+
+                <label for="cedula">Cédula de ciudadanía: *</label>
+                <input type="text" id="cedula" name="cedula" placeholder="Ej: 1090123456" required>
+
+                <label for="nombre">Nombre completo: *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Carlos Pérez Gómez" required>
+
+                <label for="email">Correo electrónico institucional: *</label>
+                <input type="email" id="email" name="email" placeholder="Ej: cperez@unilibre.edu.co" required>
+
+                <label for="celular">Número de WhatsApp: *</label>
+                <input type="number" id="celular" name="celular" placeholder="Ej: 3001234567" required>
+
+                <label>Tipo de usuario: *</label>
+                <label class="radio-label"><input type="radio" name="tipo-usuario" value="estudiante" required> Estudiante</label>
+                <label class="radio-label"><input type="radio" name="tipo-usuario" value="docente"> Docente</label>
+                <label class="radio-label"><input type="radio" name="tipo-usuario" value="administrativo"> Administrativo</label>
+                <label class="radio-label"><input type="radio" name="tipo-usuario" value="otro"> Otro</label>
+
+                <label for="programa">Programa académico / Dependencia:</label>
+                <input type="text" id="programa" name="programa" placeholder="Ej: Ingeniería de Sistemas">
+
+                <label for="fecha-inicio">Fecha inicio de acceso: *</label>
+                <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+
+                <label for="fecha-fin">Fecha fin de acceso: *</label>
+                <input type="date" id="fecha-fin" name="fecha-fin" required>
+
+                <h3>Datos del vehículo</h3>
+
+                <label for="placa">Placa del vehículo: *</label>
+                <input type="text" id="placa" name="placa" placeholder="Ej: ABC123" maxlength="7" required>
+
+                <label for="marca">Marca: *</label>
+                <input type="text" id="marca" name="marca" placeholder="Ej: Chevrolet" required>
+
+                <label for="linea">Línea / Modelo: *</label>
+                <input type="text" id="linea" name="linea" placeholder="Ej: Spark GT">
+
+                <label for="anio">Año del modelo: *</label>
+                <input type="number" id="anio" name="anio" placeholder="Ej: 2022" min="1990" max="2026" required>
+
+                <label>Clase de vehículo: *</label>
+                <label class="radio-label"><input type="radio" name="clase" value="automovil" required> Automóvil</label>
+                <label class="radio-label"><input type="radio" name="clase" value="moto"> Motocicleta</label>
+                <label class="radio-label"><input type="radio" name="clase" value="camioneta"> Camioneta</label>
+                <label class="radio-label"><input type="radio" name="clase" value="bicicleta"> Bicicleta eléctrica</label>
+
+                <h3>Términos y condiciones</h3>
+                <div class="terminos-box">
+                    <p>Al registrarse usted acepta que:</p>
+                    <ul>
+                        <li>Sus datos personales y de vehículo serán almacenados en la base de datos de la Universidad Libre Seccional Cúcuta.</li>
+                        <li>Se capturarán imágenes fotográficas de su vehículo en cada ingreso y salida del campus.</li>
+                        <li>Recibirá notificaciones automáticas por WhatsApp sobre los eventos de acceso de su vehículo.</li>
+                        <li>El acceso al parqueadero puede ser revocado por la administración en cualquier momento.</li>
+                        <li>La información será usada exclusivamente para fines de seguridad y control de acceso.</li>
+                    </ul>
+                </div>
+                <label class="radio-label">
+                    <input type="checkbox" name="terminos" required>
+                    Acepto los términos y condiciones *
+                </label>
+
+                <div class="botones">
+                    <button type="submit"> Registrar usuario y vehículo</button>
+                    <button type="reset"> Limpiar formulario</button>
+                </div>
+
+            </form>
+        </section>
+        <!-- Inhabilitar vehículo -->
+            <div class="panel-card">
+                <h3> Inhabilitar Vehículo</h3>
+                <form action="#" method="post">
+                    <label for="inh-placa">Placa a inhabilitar:</label>
+                    <input type="text" id="inh-placa" name="placa" placeholder="Ej: JKL654" maxlength="7" required>
+
+                    <label for="inh-motivo">Motivo:</label>
+                    <textarea id="inh-motivo" name="motivo" rows="3" placeholder="Ej: Venció el período académico..."></textarea>
+
+                    <div class="botones">
+                        <button type="submit" class="btn-rojo"> Inhabilitar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Carga masiva CSV/XLS -->
+            <div class="panel-card">
+                <h3> Carga Masiva de Usuarios (CSV / XLS)</h3>
+                <p>Cargue un archivo con los datos de los usuarios. El sistema validará la estructura y los campos obligatorios antes de procesar.</p>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <label for="archivo">Seleccione el archivo:</label>
+                    <input type="file" id="archivo" name="archivo" accept=".csv,.xls,.xlsx" required>
+
+                    <p class="nota"> <strong>Campos requeridos:</strong> Cédula, Nombre completo, Tipo de usuario, Dependencia, Placa, Fecha inicio, Fecha fin.</p>
+
+                    <div class="botones">
+                        <button type="submit"> Cargar archivo</button>
+                    </div>
+                </form>
+
+                <h3> Registro Individual de Usuario</h3>
+                <form action="#" method="post">
+                    <label for="ind-cedula">Cédula:</label>
+                    <input type="text" id="ind-cedula" name="cedula" placeholder="Ej: 1090999888" required>
+
+                    <label for="ind-nombre">Nombre completo:</label>
+                    <input type="text" id="ind-nombre" name="nombre" placeholder="Ej: Luis Rueda" required>
+
+                    <label for="ind-tipo">Tipo de usuario:</label>
+                    <select id="ind-tipo" name="tipo">
+                        <option value="">-- Seleccione --</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="docente">Docente</option>
+                        <option value="administrativo">Administrativo</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <label for="ind-placa">Placa:</label>
+                    <input type="text" id="ind-placa" name="placa" placeholder="Ej: PQR111" maxlength="7" required>
+
+                    <div class="botones">
+                        <button type="submit"> Registrar</button>
+                    </div>
+                </form>
+            </div>
+
+           
+
+        
+
+            <!-- Registrar persona no autorizada -->
+            <div class="panel-card panel-seguridad">
+                <h3> Registrar Persona No Autorizada</h3>
+                <form action="#" method="post">
+                    <label for="vis-nombre">Nombre completo:</label>
+                    <input type="text" id="vis-nombre" name="nombre" placeholder="Ej: Visitante Externo" required>
+
+                    <label for="vis-cedula">Cédula o documento:</label>
+                    <input type="text" id="vis-cedula" name="cedula" placeholder="Ej: 1090000001" required>
+
+                    <label for="vis-placa">Placa del vehículo:</label>
+                    <input type="text" id="vis-placa" name="placa" placeholder="Ej: STU222" maxlength="7" required>
+
+                    <label for="vis-destino">Dependencia a visitar:</label>
+                    <input type="text" id="vis-destino" name="destino" placeholder="Ej: Rectoría">
+
+                    <label for="vis-obs">Observaciones:</label>
+                    <textarea id="vis-obs" name="obs" rows="2" placeholder="Ej: Proveedor de mantenimiento..."></textarea>
+
+                    <div class="botones">
+                        <button type="submit"> Registrar visitante</button>
+                    </div>
+                </form>
+            </div>
+        </section>

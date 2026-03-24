@@ -1,0 +1,50 @@
+ <!-- SECCIÓN 8: NOTIFICACIONES WHATSAPP -->
+        <section id="notificaciones">
+            <h2>Notificaciones por WhatsApp</h2>
+            <p>El sistema envía un mensaje automático al número de WhatsApp registrado cada vez que se detecta el ingreso o salida del vehículo.</p>
+
+            <div class="whatsapp-demo">
+                <h3> Ejemplo de mensaje enviado</h3>
+                <div class="burbuja-whatsapp">
+                    <p><strong> UniLibre Cúcuta — Control Vehicular</strong></p>
+                    <p> <strong>Fecha:</strong> 22/03/2026</p>
+                    <p> <strong>Hora:</strong> 07:30 AM</p>
+                    <p> <strong>Placa:</strong> ABC123</p>
+                    <p> <strong>Evento:</strong> Ingreso autorizado al campus</p>
+                    <p> Foto del vehículo adjunta.</p>
+                    <p><em>Universidad Libre Seccional Cúcuta</em></p>
+                </div>
+
+                <h3>Historial de notificaciones enviadas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>Propietario</th>
+                            <th>Celular</th>
+                            <th>Evento</th>
+                            <th>Fecha / Hora</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ABC123</td>
+                            <td>Carlos Pérez</td>
+                            <td>300 123 4567</td>
+                            <td>Ingreso al campus</td>
+                            <td>22/03/2026 — 07:30</td>
+                            <td> Enviado</td>
+                        </tr>
+                        <tr>
+                            <td>XYZ789</td>
+                            <td>María López</td>
+                            <td>311 987 6543</td>
+                            <td>Salida del campus</td>
+                            <td>22/03/2026 — 17:00</td>
+                            <td> Enviado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>

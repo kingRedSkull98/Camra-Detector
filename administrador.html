@@ -1,0 +1,23 @@
+  <!-- SECCIÓN 5: PANEL ADMINISTRADOR -->
+        <section id="administrador">
+            <h2>Panel de Administrador</h2>
+            <p>Módulo exclusivo para el administrador del sistema. Permite gestionar vehículos, usuarios y reportes.</p>
+
+            <!-- Habilitar vehículo -->
+            <div class="panel-card">
+                <h3> Habilitar Vehículo</h3>
+                <form action="#" method="post">
+                    <label for="adm-placa">Placa del vehículo:</label>
+                    <input type="text" id="adm-placa" name="placa" placeholder="Ej: MNO987" maxlength="7" required>
+
+                    <label for="adm-cedula">Cédula del propietario:</label>
+                    <input type="text" id="adm-cedula" name="cedula" placeholder="Ej: 1090123456" required>
+
+                    <label for="adm-vigencia">Vigencia del permiso:</label>
+                    <input type="date" id="adm-vigencia" name="vigencia" required>
+
+                    <div class="botones">
+                        <button type="submit"> Habilitar</button>
+                    </div>
+                </form>
+            </div>

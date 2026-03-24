@@ -1,0 +1,84 @@
+ <!-- Generar reporte -->
+            <div class="panel-card">
+                <h3> Generar Reporte de Accesos</h3>
+                <form action="#" method="get">
+                    <label for="rep-desde">Fecha desde:</label>
+                    <input type="date" id="rep-desde" name="desde" required>
+
+                    <label for="rep-hasta">Fecha hasta:</label>
+                    <input type="date" id="rep-hasta" name="hasta" required>
+
+                    <label>Formato:</label>
+                    <label class="radio-label"><input type="radio" name="formato" value="pdf"> PDF</label>
+                    <label class="radio-label"><input type="radio" name="formato" value="excel"> Excel</label>
+                    <label class="radio-label"><input type="radio" name="formato" value="pantalla" checked> Ver en pantalla</label>
+
+                    <div class="botones">
+                        <button type="submit"> Generar reporte</button>
+                    </div>
+                </form>
+
+                <h4>Vista previa del reporte</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>Propietario</th>
+                            <th>Tipo</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Movimiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ABC123</td>
+                            <td>Carlos Pérez</td>
+                            <td>Docente</td>
+                            <td>22/03/2026</td>
+                            <td>07:30</td>
+                            <td> Entrada</td>
+                        </tr>
+                        <tr>
+                            <td>XYZ789</td>
+                            <td>María López</td>
+                            <td>Administrativo</td>
+                            <td>22/03/2026</td>
+                            <td>08:15</td>
+                            <td> Entrada</td>
+                        </tr>
+                        <tr>
+                            <td>ABC123</td>
+                            <td>Carlos Pérez</td>
+                            <td>Docente</td>
+                            <td>22/03/2026</td>
+                            <td>17:45</td>
+                            <td> Salida</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- SECCIÓN 9: REPORTES / ESTADÍSTICAS -->
+        <section id="reportes">
+            <h2>Reportes y Estadísticas</h2>
+            <p>Resumen general de actividad vehicular registrada en el sistema.</p>
+            <div class="stats">
+                <div class="stat">
+                    <h3>150</h3>
+                    <p>Vehículos registrados</p>
+                </div>
+                <div class="stat">
+                    <h3>47</h3>
+                    <p>Ingresos hoy</p>
+                </div>
+                <div class="stat">
+                    <h3>5</h3>
+                    <p>Accesos no autorizados</p>
+                </div>
+                <div class="stat">
+                    <h3>142</h3>
+                    <p>Notificaciones enviadas</p>
+                </div>
+            </div>
+        </section>

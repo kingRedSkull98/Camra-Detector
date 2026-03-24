@@ -1,0 +1,23 @@
+<!-- SECCIÓN 6: PANEL DE SEGURIDAD -->
+        <section id="seguridad">
+            <h2>Panel de Seguridad</h2>
+            <p>Módulo para el personal de seguridad. Permite autorizar el ingreso de vehículos no registrados y registrar visitantes externos.</p>
+
+            <!-- Autorizar vehículo no registrado -->
+            <div class="panel-card panel-seguridad">
+                <h3>🚗 Autorizar Ingreso No Registrado</h3>
+                <form action="#" method="post">
+                    <label for="seg-placa">Placa del vehículo:</label>
+                    <input type="text" id="seg-placa" name="placa" placeholder="Ej: STU222" maxlength="7" required>
+
+                    <label for="seg-motivo">Motivo de autorización:</label>
+                    <textarea id="seg-motivo" name="motivo" rows="2" placeholder="Ej: Visita autorizada por Rectoría..."></textarea>
+
+                    <label for="seg-guardia">Nombre del guardia que autoriza:</label>
+                    <input type="text" id="seg-guardia" name="guardia" placeholder="Ej: Andrés Morales" required>
+
+                    <div class="botones">
+                        <button type="submit">🔓 Autorizar ingreso</button>
+                    </div>
+                </form>
+            </div>

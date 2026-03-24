@@ -8,6 +8,8 @@
     <meta name="keywords" content="control vehicular, visión artificial, placa, acceso, universidad libre, cúcuta">
     <title>Sistema de Control de Acceso Vehicular - UniLibre Cúcuta</title>
     <link rel="stylesheet" href="Style.css">
+
+    
 </head>
 
 <body>
@@ -26,16 +28,19 @@
 
         <nav>
             <ul>
-                <li><a href="#descripcion">Inicio</a></li>
-                <li><a href="#caracteristicas">Características</a></li>
-                <li><a href="#registro-usuario">Registro</a></li>
-                <li><a href="#vehiculos">Vehículos</a></li>
-                <li><a href="#administrador">Administrador</a></li>
-                <li><a href="#seguridad">Seguridad</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#notificaciones">WhatsApp</a></li>
-                <li><a href="#reportes">Reportes</a></li>
-                <li><a href="#ubicacion">Ubicación</a></li>
+        
+                <li><a href="reportes">Reportes</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="whatsapp.html">whatsapp</a></li>
+                <li><a href="eventos.html">eventos</a></li>
+                <li><a href="seguridad.html">seguridad</a></li>
+                <li><a href="administrador.html">administración</a></li>
+                <li><a href="vehiculos.html">vehiculos</a></li>
+                <li><a href="registro.html">registro</a></li>
+                <li><a href="caracteristicas.html">caracteristicas</a></li>
+
+
+
             </ul>
         </nav>
     </header>
@@ -46,19 +51,19 @@
         <!-- TARJETAS DE RESUMEN -->
         <section class="cards-grid">
             <div class="card">
-                <h3>🎥 Visión Artificial</h3>
+                <h3> Visión Artificial</h3>
                 <p>Detección y lectura automática de placas vehiculares mediante cámara y procesamiento de imagen en tiempo real.</p>
             </div>
             <div class="card">
-                <h3>🚧 Control de Barrera</h3>
+                <h3> Control de Barrera</h3>
                 <p>Apertura automática de la barrera cuando el sistema detecta una placa autorizada en la base de datos.</p>
             </div>
             <div class="card">
-                <h3>💬 Notificación WhatsApp</h3>
+                <h3> Notificación WhatsApp</h3>
                 <p>Alertas automáticas vía chatbot al número registrado cada vez que el vehículo ingresa o sale del campus.</p>
             </div>
             <div class="card">
-                <h3>🛡️ Control de Seguridad</h3>
+                <h3> Control de Seguridad</h3>
                 <p>Registro y gestión de vehículos no autorizados con intervención del personal de seguridad del campus.</p>
             </div>
         </section>
@@ -79,537 +84,13 @@
             <hr>
         </section>
 
-        <!-- SECCIÓN 2: CARACTERÍSTICAS -->
-        <section id="caracteristicas">
-            <h2>Características del Sistema</h2>
+       
 
-            <h3>Funcionalidades principales</h3>
-            <ul>
-                <li>Captura y detección automática de vehículos al llegar al acceso</li>
-                <li>Lectura de placa mediante cámara instalada en entrada y salida</li>
-                <li>Reconocimiento de texto OCR en la imagen de la placa</li>
-                <li>Verificación de autorización y permisos vigentes en la base de datos</li>
-                <li>Apertura automática de barrera para vehículos autorizados</li>
-                <li>Registro de cada evento con placa, foto, fecha, hora y tipo de movimiento</li>
-                <li>Detección y alerta de vehículos sin permisos o no registrados</li>
-                <li>Notificación automática por WhatsApp al propietario</li>
-                <li>Carga masiva de usuarios mediante archivos CSV o XLS</li>
-                <li>Registro individual de usuarios desde el panel de administrador</li>
-                <li>Generación de reportes de ingresos y salidas</li>
-            </ul>
+        
 
-            <h3>Pasos de funcionamiento</h3>
-            <ol>
-                <li>La cámara detecta la llegada de un vehículo al punto de acceso</li>
-                <li>El sistema captura la imagen de la placa</li>
-                <li>El algoritmo procesa la imagen y reconoce el texto de la placa</li>
-                <li>El sistema verifica si la placa está registrada y con permiso vigente</li>
-                <li>Si está autorizada, la barrera se abre automáticamente</li>
-                <li>Si no está autorizada o no existe en el sistema, se notifica a seguridad</li>
-                <li>Se registra el evento y se envía notificación por WhatsApp al propietario</li>
-            </ol>
+       
 
-            <h3>Glosario</h3>
-            <dl>
-                <dt>Placa autorizada</dt>
-                <dd>Vehículo registrado con permisos vigentes en la base de datos del sistema.</dd>
-                <dt>Placa no autorizada</dt>
-                <dd>Vehículo cuyo registro no existe o cuyo permiso ha expirado.</dd>
-                <dt>Evento de acceso</dt>
-                <dd>Registro de cada entrada o salida con fecha, hora, imagen y estado del acceso.</dd>
-                <dt>Chatbot WhatsApp</dt>
-                <dd>Bot que envía notificaciones automáticas al propietario cuando su vehículo entra o sale.</dd>
-            </dl>
-        </section>
-
-        <!-- SECCIÓN 3: REGISTRO DE USUARIO -->
-        <section id="registro-usuario">
-            <h2>Registro de Usuario del Parqueadero</h2>
-            <p>
-                Los estudiantes, docentes y administrativos deben registrar sus datos personales
-                y los datos de su vehículo para acceder al parqueadero universitario.
-            </p>
-
-            <form action="#" method="post">
-
-                <h3>Datos personales</h3>
-
-                <label for="cedula">Cédula de ciudadanía: *</label>
-                <input type="text" id="cedula" name="cedula" placeholder="Ej: 1090123456" required>
-
-                <label for="nombre">Nombre completo: *</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej: Carlos Pérez Gómez" required>
-
-                <label for="email">Correo electrónico institucional: *</label>
-                <input type="email" id="email" name="email" placeholder="Ej: cperez@unilibre.edu.co" required>
-
-                <label for="celular">Número de WhatsApp: *</label>
-                <input type="number" id="celular" name="celular" placeholder="Ej: 3001234567" required>
-
-                <label>Tipo de usuario: *</label>
-                <label class="radio-label"><input type="radio" name="tipo-usuario" value="estudiante" required> Estudiante</label>
-                <label class="radio-label"><input type="radio" name="tipo-usuario" value="docente"> Docente</label>
-                <label class="radio-label"><input type="radio" name="tipo-usuario" value="administrativo"> Administrativo</label>
-                <label class="radio-label"><input type="radio" name="tipo-usuario" value="otro"> Otro</label>
-
-                <label for="programa">Programa académico / Dependencia:</label>
-                <input type="text" id="programa" name="programa" placeholder="Ej: Ingeniería de Sistemas">
-
-                <label for="fecha-inicio">Fecha inicio de acceso: *</label>
-                <input type="date" id="fecha-inicio" name="fecha-inicio" required>
-
-                <label for="fecha-fin">Fecha fin de acceso: *</label>
-                <input type="date" id="fecha-fin" name="fecha-fin" required>
-
-                <h3>Datos del vehículo</h3>
-
-                <label for="placa">Placa del vehículo: *</label>
-                <input type="text" id="placa" name="placa" placeholder="Ej: ABC123" maxlength="7" required>
-
-                <label for="marca">Marca: *</label>
-                <input type="text" id="marca" name="marca" placeholder="Ej: Chevrolet" required>
-
-                <label for="linea">Línea / Modelo: *</label>
-                <input type="text" id="linea" name="linea" placeholder="Ej: Spark GT">
-
-                <label for="anio">Año del modelo: *</label>
-                <input type="number" id="anio" name="anio" placeholder="Ej: 2022" min="1990" max="2026" required>
-
-                <label>Clase de vehículo: *</label>
-                <label class="radio-label"><input type="radio" name="clase" value="automovil" required> Automóvil</label>
-                <label class="radio-label"><input type="radio" name="clase" value="moto"> Motocicleta</label>
-                <label class="radio-label"><input type="radio" name="clase" value="camioneta"> Camioneta</label>
-                <label class="radio-label"><input type="radio" name="clase" value="bicicleta"> Bicicleta eléctrica</label>
-
-                <h3>Términos y condiciones</h3>
-                <div class="terminos-box">
-                    <p>Al registrarse usted acepta que:</p>
-                    <ul>
-                        <li>Sus datos personales y de vehículo serán almacenados en la base de datos de la Universidad Libre Seccional Cúcuta.</li>
-                        <li>Se capturarán imágenes fotográficas de su vehículo en cada ingreso y salida del campus.</li>
-                        <li>Recibirá notificaciones automáticas por WhatsApp sobre los eventos de acceso de su vehículo.</li>
-                        <li>El acceso al parqueadero puede ser revocado por la administración en cualquier momento.</li>
-                        <li>La información será usada exclusivamente para fines de seguridad y control de acceso.</li>
-                    </ul>
-                </div>
-                <label class="radio-label">
-                    <input type="checkbox" name="terminos" required>
-                    Acepto los términos y condiciones *
-                </label>
-
-                <div class="botones">
-                    <button type="submit">✅ Registrar usuario y vehículo</button>
-                    <button type="reset">🔄 Limpiar formulario</button>
-                </div>
-
-            </form>
-        </section>
-
-        <!-- SECCIÓN 4: TABLA DE VEHÍCULOS -->
-        <section id="vehiculos">
-            <h2>Vehículos Registrados en el Sistema</h2>
-            <p>Tabla de vehículos con permisos activos, pendientes e inhabilitados en el campus.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="7">Registro de Vehículos — Universidad Libre Cúcuta</th>
-                    </tr>
-                    <tr>
-                        <th>Placa</th>
-                        <th>Propietario</th>
-                        <th>Tipo</th>
-                        <th>Marca / Línea</th>
-                        <th>Dependencia</th>
-                        <th>Vigencia</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ABC123</td>
-                        <td>Carlos Pérez</td>
-                        <td>Automóvil</td>
-                        <td>Chevrolet Spark</td>
-                        <td>Docentes</td>
-                        <td>31/12/2026</td>
-                        <td class="autorizado">✅ Autorizado</td>
-                    </tr>
-                    <tr>
-                        <td>XYZ789</td>
-                        <td>María López</td>
-                        <td>Motocicleta</td>
-                        <td>Honda CB190</td>
-                        <td>Administrativos</td>
-                        <td>30/06/2026</td>
-                        <td class="autorizado">✅ Autorizado</td>
-                    </tr>
-                    <tr>
-                        <td>DEF456</td>
-                        <td>Juan García</td>
-                        <td>Camioneta</td>
-                        <td>Renault Duster</td>
-                        <td>Estudiantes</td>
-                        <td>15/03/2026</td>
-                        <td class="pendiente">⏳ Pendiente</td>
-                    </tr>
-                    <tr>
-                        <td>GHI321</td>
-                        <td>Ana Martínez</td>
-                        <td>Automóvil</td>
-                        <td>Mazda 2</td>
-                        <td>Docentes</td>
-                        <td>31/12/2026</td>
-                        <td class="autorizado">✅ Autorizado</td>
-                    </tr>
-                    <tr>
-                        <td>JKL654</td>
-                        <td>Pedro Sánchez</td>
-                        <td>Motocicleta</td>
-                        <td>Yamaha FZ</td>
-                        <td>Estudiantes</td>
-                        <td>01/01/2026</td>
-                        <td class="inhabilitado">🚫 Inhabilitado</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- SECCIÓN 5: PANEL ADMINISTRADOR -->
-        <section id="administrador">
-            <h2>Panel de Administrador</h2>
-            <p>Módulo exclusivo para el administrador del sistema. Permite gestionar vehículos, usuarios y reportes.</p>
-
-            <!-- Habilitar vehículo -->
-            <div class="panel-card">
-                <h3>➕ Habilitar Vehículo</h3>
-                <form action="#" method="post">
-                    <label for="adm-placa">Placa del vehículo:</label>
-                    <input type="text" id="adm-placa" name="placa" placeholder="Ej: MNO987" maxlength="7" required>
-
-                    <label for="adm-cedula">Cédula del propietario:</label>
-                    <input type="text" id="adm-cedula" name="cedula" placeholder="Ej: 1090123456" required>
-
-                    <label for="adm-vigencia">Vigencia del permiso:</label>
-                    <input type="date" id="adm-vigencia" name="vigencia" required>
-
-                    <div class="botones">
-                        <button type="submit">✅ Habilitar</button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Inhabilitar vehículo -->
-            <div class="panel-card">
-                <h3>🚫 Inhabilitar Vehículo</h3>
-                <form action="#" method="post">
-                    <label for="inh-placa">Placa a inhabilitar:</label>
-                    <input type="text" id="inh-placa" name="placa" placeholder="Ej: JKL654" maxlength="7" required>
-
-                    <label for="inh-motivo">Motivo:</label>
-                    <textarea id="inh-motivo" name="motivo" rows="3" placeholder="Ej: Venció el período académico..."></textarea>
-
-                    <div class="botones">
-                        <button type="submit" class="btn-rojo">🚫 Inhabilitar</button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Carga masiva CSV/XLS -->
-            <div class="panel-card">
-                <h3>📂 Carga Masiva de Usuarios (CSV / XLS)</h3>
-                <p>Cargue un archivo con los datos de los usuarios. El sistema validará la estructura y los campos obligatorios antes de procesar.</p>
-                <form action="#" method="post" enctype="multipart/form-data">
-                    <label for="archivo">Seleccione el archivo:</label>
-                    <input type="file" id="archivo" name="archivo" accept=".csv,.xls,.xlsx" required>
-
-                    <p class="nota">📋 <strong>Campos requeridos:</strong> Cédula, Nombre completo, Tipo de usuario, Dependencia, Placa, Fecha inicio, Fecha fin.</p>
-
-                    <div class="botones">
-                        <button type="submit">📤 Cargar archivo</button>
-                    </div>
-                </form>
-
-                <h3>👤 Registro Individual de Usuario</h3>
-                <form action="#" method="post">
-                    <label for="ind-cedula">Cédula:</label>
-                    <input type="text" id="ind-cedula" name="cedula" placeholder="Ej: 1090999888" required>
-
-                    <label for="ind-nombre">Nombre completo:</label>
-                    <input type="text" id="ind-nombre" name="nombre" placeholder="Ej: Luis Rueda" required>
-
-                    <label for="ind-tipo">Tipo de usuario:</label>
-                    <select id="ind-tipo" name="tipo">
-                        <option value="">-- Seleccione --</option>
-                        <option value="estudiante">Estudiante</option>
-                        <option value="docente">Docente</option>
-                        <option value="administrativo">Administrativo</option>
-                        <option value="otro">Otro</option>
-                    </select>
-
-                    <label for="ind-placa">Placa:</label>
-                    <input type="text" id="ind-placa" name="placa" placeholder="Ej: PQR111" maxlength="7" required>
-
-                    <div class="botones">
-                        <button type="submit">✅ Registrar</button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Generar reporte -->
-            <div class="panel-card">
-                <h3>📊 Generar Reporte de Accesos</h3>
-                <form action="#" method="get">
-                    <label for="rep-desde">Fecha desde:</label>
-                    <input type="date" id="rep-desde" name="desde" required>
-
-                    <label for="rep-hasta">Fecha hasta:</label>
-                    <input type="date" id="rep-hasta" name="hasta" required>
-
-                    <label>Formato:</label>
-                    <label class="radio-label"><input type="radio" name="formato" value="pdf"> PDF</label>
-                    <label class="radio-label"><input type="radio" name="formato" value="excel"> Excel</label>
-                    <label class="radio-label"><input type="radio" name="formato" value="pantalla" checked> Ver en pantalla</label>
-
-                    <div class="botones">
-                        <button type="submit">📊 Generar reporte</button>
-                    </div>
-                </form>
-
-                <h4>Vista previa del reporte</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Placa</th>
-                            <th>Propietario</th>
-                            <th>Tipo</th>
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                            <th>Movimiento</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ABC123</td>
-                            <td>Carlos Pérez</td>
-                            <td>Docente</td>
-                            <td>22/03/2026</td>
-                            <td>07:30</td>
-                            <td>🟢 Entrada</td>
-                        </tr>
-                        <tr>
-                            <td>XYZ789</td>
-                            <td>María López</td>
-                            <td>Administrativo</td>
-                            <td>22/03/2026</td>
-                            <td>08:15</td>
-                            <td>🟢 Entrada</td>
-                        </tr>
-                        <tr>
-                            <td>ABC123</td>
-                            <td>Carlos Pérez</td>
-                            <td>Docente</td>
-                            <td>22/03/2026</td>
-                            <td>17:45</td>
-                            <td>🔴 Salida</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 6: PANEL DE SEGURIDAD -->
-        <section id="seguridad">
-            <h2>Panel de Seguridad</h2>
-            <p>Módulo para el personal de seguridad. Permite autorizar el ingreso de vehículos no registrados y registrar visitantes externos.</p>
-
-            <!-- Autorizar vehículo no registrado -->
-            <div class="panel-card panel-seguridad">
-                <h3>🚗 Autorizar Ingreso No Registrado</h3>
-                <form action="#" method="post">
-                    <label for="seg-placa">Placa del vehículo:</label>
-                    <input type="text" id="seg-placa" name="placa" placeholder="Ej: STU222" maxlength="7" required>
-
-                    <label for="seg-motivo">Motivo de autorización:</label>
-                    <textarea id="seg-motivo" name="motivo" rows="2" placeholder="Ej: Visita autorizada por Rectoría..."></textarea>
-
-                    <label for="seg-guardia">Nombre del guardia que autoriza:</label>
-                    <input type="text" id="seg-guardia" name="guardia" placeholder="Ej: Andrés Morales" required>
-
-                    <div class="botones">
-                        <button type="submit">🔓 Autorizar ingreso</button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Registrar persona no autorizada -->
-            <div class="panel-card panel-seguridad">
-                <h3>📝 Registrar Persona No Autorizada</h3>
-                <form action="#" method="post">
-                    <label for="vis-nombre">Nombre completo:</label>
-                    <input type="text" id="vis-nombre" name="nombre" placeholder="Ej: Visitante Externo" required>
-
-                    <label for="vis-cedula">Cédula o documento:</label>
-                    <input type="text" id="vis-cedula" name="cedula" placeholder="Ej: 1090000001" required>
-
-                    <label for="vis-placa">Placa del vehículo:</label>
-                    <input type="text" id="vis-placa" name="placa" placeholder="Ej: STU222" maxlength="7" required>
-
-                    <label for="vis-destino">Dependencia a visitar:</label>
-                    <input type="text" id="vis-destino" name="destino" placeholder="Ej: Rectoría">
-
-                    <label for="vis-obs">Observaciones:</label>
-                    <textarea id="vis-obs" name="obs" rows="2" placeholder="Ej: Proveedor de mantenimiento..."></textarea>
-
-                    <div class="botones">
-                        <button type="submit">📝 Registrar visitante</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 7: REGISTRO DE EVENTOS -->
-        <section id="eventos">
-            <h2>Historial de Eventos de Acceso</h2>
-            <p>Registro completo de todos los eventos: vehículos autorizados, sin permiso, placas no registradas y autorizaciones manuales de seguridad.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="7">Historial de Eventos — Universidad Libre Cúcuta</th>
-                    </tr>
-                    <tr>
-                        <th>Placa</th>
-                        <th>Fecha</th>
-                        <th>Hora</th>
-                        <th>Movimiento</th>
-                        <th>Estado</th>
-                        <th>Evidencia</th>
-                        <th>WhatsApp</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ABC123</td>
-                        <td>22/03/2026</td>
-                        <td>07:30</td>
-                        <td>Entrada</td>
-                        <td class="autorizado">✅ Autorizado</td>
-                        <td>📷 foto_001.jpg</td>
-                        <td>✅ Enviado</td>
-                    </tr>
-                    <tr>
-                        <td>JKL654</td>
-                        <td>22/03/2026</td>
-                        <td>08:02</td>
-                        <td>Entrada</td>
-                        <td class="inhabilitado">🚫 Sin permiso</td>
-                        <td>📷 foto_002.jpg</td>
-                        <td>⚠️ Alerta</td>
-                    </tr>
-                    <tr>
-                        <td>ZZZ999</td>
-                        <td>22/03/2026</td>
-                        <td>09:15</td>
-                        <td>Entrada</td>
-                        <td class="no-registrado">❌ No registrada</td>
-                        <td>📷 foto_003.jpg</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>STU222</td>
-                        <td>22/03/2026</td>
-                        <td>10:00</td>
-                        <td>Entrada</td>
-                        <td class="pendiente">🔓 Por seguridad</td>
-                        <td>📷 foto_004.jpg</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>XYZ789</td>
-                        <td>22/03/2026</td>
-                        <td>17:00</td>
-                        <td>Salida</td>
-                        <td class="autorizado">✅ Autorizado</td>
-                        <td>📷 foto_005.jpg</td>
-                        <td>✅ Enviado</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- SECCIÓN 8: NOTIFICACIONES WHATSAPP -->
-        <section id="notificaciones">
-            <h2>Notificaciones por WhatsApp</h2>
-            <p>El sistema envía un mensaje automático al número de WhatsApp registrado cada vez que se detecta el ingreso o salida del vehículo.</p>
-
-            <div class="whatsapp-demo">
-                <h3>📱 Ejemplo de mensaje enviado</h3>
-                <div class="burbuja-whatsapp">
-                    <p><strong>🚗 UniLibre Cúcuta — Control Vehicular</strong></p>
-                    <p>📅 <strong>Fecha:</strong> 22/03/2026</p>
-                    <p>⏰ <strong>Hora:</strong> 07:30 AM</p>
-                    <p>🚘 <strong>Placa:</strong> ABC123</p>
-                    <p>✅ <strong>Evento:</strong> Ingreso autorizado al campus</p>
-                    <p>📷 Foto del vehículo adjunta.</p>
-                    <p><em>Universidad Libre Seccional Cúcuta</em></p>
-                </div>
-
-                <h3>Historial de notificaciones enviadas</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Placa</th>
-                            <th>Propietario</th>
-                            <th>Celular</th>
-                            <th>Evento</th>
-                            <th>Fecha / Hora</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ABC123</td>
-                            <td>Carlos Pérez</td>
-                            <td>300 123 4567</td>
-                            <td>Ingreso al campus</td>
-                            <td>22/03/2026 — 07:30</td>
-                            <td>✅ Enviado</td>
-                        </tr>
-                        <tr>
-                            <td>XYZ789</td>
-                            <td>María López</td>
-                            <td>311 987 6543</td>
-                            <td>Salida del campus</td>
-                            <td>22/03/2026 — 17:00</td>
-                            <td>✅ Enviado</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 9: REPORTES / ESTADÍSTICAS -->
-        <section id="reportes">
-            <h2>Reportes y Estadísticas</h2>
-            <p>Resumen general de actividad vehicular registrada en el sistema.</p>
-            <div class="stats">
-                <div class="stat">
-                    <h3>150</h3>
-                    <p>Vehículos registrados</p>
-                </div>
-                <div class="stat">
-                    <h3>47</h3>
-                    <p>Ingresos hoy</p>
-                </div>
-                <div class="stat">
-                    <h3>5</h3>
-                    <p>Accesos no autorizados</p>
-                </div>
-                <div class="stat">
-                    <h3>142</h3>
-                    <p>Notificaciones enviadas</p>
-                </div>
-            </div>
-        </section>
+      
 
         <!-- SECCIÓN 10: REDES Y ENLACES -->
         <section id="redes">
@@ -617,37 +98,21 @@
             <ul>
                 <li>
                     <a href="https://www.facebook.com/UniLibreCucuta1/" target="_blank" rel="noopener">
-                        📘 Facebook — Universidad Libre Cúcuta
+                         Facebook — Universidad Libre Cúcuta
                     </a>
                 </li>
                 <li>
                     <a href="https://www.unilibre.edu.co/cucuta/" target="_blank" rel="noopener">
-                        🌐 Sitio web oficial UniLibre Cúcuta
+                         Sitio web oficial UniLibre Cúcuta
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/kingRedSkull98/Camra-Detector" target="_blank" rel="noopener">
-                        💻 Repositorio GitHub del proyecto
+                         Repositorio GitHub del proyecto
                     </a>
                 </li>
             </ul>
         </section>
-
-        <!-- SECCIÓN 11: UBICACIÓN -->
-        <section id="ubicacion">
-            <h2>Ubicación</h2>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.8358089711883!2d-72.50140249172229!3d7.912214392078177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e664540a6ea196f%3A0xb1d0e71aebd40351!2sUniversidad%20Libre%20Seccional%20C%C3%BAcuta!5e0!3m2!1ses-419!2sco!4v1724602570625!5m2!1ses-419!2sco"
-                height="400"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Ubicación Universidad Libre Cúcuta">
-            </iframe>
-        </section>
-
-    </main>
 
     <!-- ==================== PIE DE PÁGINA ==================== -->
     <footer>
@@ -656,7 +121,7 @@
             <strong>Miguel Ángel Sayago Rozo</strong> &nbsp;·&nbsp;
             <strong>Rodrigo Rueda Cañas</strong>
         </p>
-        <p>🎓 Universidad Libre Seccional Cúcuta &copy; 2026</p>
+        <p> Universidad Libre Seccional Cúcuta &copy; 2026</p>
         <p>Sistema de Control de Acceso Vehicular por Fotodetección</p>
     </footer>
 
