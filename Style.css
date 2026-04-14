@@ -471,6 +471,219 @@ footer p {
     font-size: 0.95em;
 }
 
+/* ================================================
+   CSS POR SECCIÓN — MENÚ PRINCIPAL
+================================================ */
+
+/* --- REPORTES --- */
+#reportes {
+    background-color: #fff5f5;
+    border-left: 5px solid #b90606;
+}
+
+#reportes h2 {
+    color: #b90606;
+}
+
+#reportes .stats {
+    margin-top: 20px;
+}
+
+#reportes .stat {
+    background-color: #221e1e;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+#reportes .stat:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(185,6,6,0.25);
+}
+
+/* --- UBICACIÓN --- */
+#ubicacion {
+    background-color: #f0f4ff;
+    border-left: 5px solid #1a56db;
+}
+
+#ubicacion h2 {
+    color: #1a56db;
+    border-bottom-color: #1a56db;
+}
+
+#ubicacion iframe {
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* --- WHATSAPP --- */
+#whatsapp {
+    background-color: #f0fdf4;
+    border-left: 5px solid #25d366;
+}
+
+#whatsapp h2 {
+    color: #128c3e;
+    border-bottom-color: #25d366;
+}
+
+#whatsapp .burbuja-whatsapp {
+    background-color: #dcf8c6;
+    border-radius: 14px;
+    padding: 15px 20px;
+    max-width: 380px;
+    border: 1px solid #a5d6a7;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* --- EVENTOS --- */
+#eventos {
+    background-color: #fffbf0;
+    border-left: 5px solid #f9a825;
+}
+
+#eventos h2 {
+    color: #e65100;
+    border-bottom-color: #f9a825;
+}
+
+#eventos table th {
+    background-color: #e65100;
+    color: white;
+}
+
+#eventos table tr:hover {
+    background-color: #fff3e0;
+}
+
+/* --- SEGURIDAD --- */
+#seguridad {
+    background-color: #fff8f0;
+    border-left: 5px solid #e65100;
+}
+
+#seguridad h2 {
+    color: #e65100;
+    border-bottom-color: #e65100;
+}
+
+#seguridad .panel-card {
+    border-left-color: #e65100;
+    background-color: #fff3e0;
+}
+
+#seguridad form button {
+    background-color: #e65100;
+}
+
+#seguridad form button:hover {
+    background-color: #bf360c;
+}
+
+/* --- ADMINISTRACIÓN --- */
+#administrador {
+    background-color: #f5f0ff;
+    border-left: 5px solid #5c35b5;
+}
+
+#administrador h2 {
+    color: #5c35b5;
+    border-bottom-color: #5c35b5;
+}
+
+#administrador .panel-card {
+    border-left-color: #5c35b5;
+    background-color: #ede7f6;
+}
+
+#administrador form button {
+    background-color: #5c35b5;
+}
+
+#administrador form button:hover {
+    background-color: #3d1f8a;
+}
+
+/* --- VEHÍCULOS --- */
+#vehiculos {
+    background-color: #f0f9ff;
+    border-left: 5px solid #0277bd;
+}
+
+#vehiculos h2 {
+    color: #0277bd;
+    border-bottom-color: #0277bd;
+}
+
+#vehiculos table th {
+    background-color: #0277bd;
+    color: white;
+}
+
+#vehiculos table tr:hover {
+    background-color: #e1f5fe;
+}
+
+/* --- REGISTRO --- */
+#registro-usuario {
+    background-color: #f9fff5;
+    border-left: 5px solid #2e7d32;
+}
+
+#registro-usuario h2 {
+    color: #2e7d32;
+    border-bottom-color: #2e7d32;
+}
+
+#registro-usuario form {
+    max-width: 650px;
+    background-color: #f1f8e9;
+    border: 1px solid #a5d6a7;
+}
+
+#registro-usuario form button[type="submit"] {
+    background-color: #2e7d32;
+}
+
+#registro-usuario form button[type="submit"]:hover {
+    background-color: #1b5e20;
+}
+
+/* --- CARACTERÍSTICAS --- */
+#caracteristicas {
+    background-color: #fafafa;
+    border-left: 5px solid #221e1e;
+}
+
+#caracteristicas h2 {
+    color: #221e1e;
+    border-bottom-color: #b90606;
+}
+
+#caracteristicas ul li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #ddd;
+}
+
+#caracteristicas ol li {
+    padding: 5px 0;
+    font-weight: 500;
+    color: #221e1e;
+}
+
+#caracteristicas dl dt {
+    background-color: #fff3f3;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: #b90606;
+}
+
+#caracteristicas dl dd {
+    padding: 4px 10px 8px 20px;
+    color: #555;
+}
+
 /* ============================
    RESPONSIVE MÓVIL
 ============================ */
@@ -520,5 +733,18 @@ footer p {
 
     .botones {
         flex-direction: column;
+    }
+
+    #vehiculos,
+    #eventos,
+    #seguridad,
+    #administrador,
+    #registro-usuario,
+    #caracteristicas,
+    #reportes,
+    #ubicacion,
+    #whatsapp {
+        border-left-width: 3px;
+        padding: 15px;
     }
 }
