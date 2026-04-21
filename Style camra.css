@@ -509,3 +509,40 @@ footer p {
         padding: 15px;
     }
 }
+#link-youtube {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#btn-cargar-video {
+  background: #d62828;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#btn-cargar-video:hover {
+  background: #b71c1c;
+}
+
+#mensaje-video {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #1d3557;
+}
+
+#contenedor-video {
+  margin-top: 20px;
+}
+
+#contenedor-video iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 12px;
+}

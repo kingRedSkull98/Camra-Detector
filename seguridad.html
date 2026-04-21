@@ -1,3 +1,4 @@
+ <head> <link rel="stylesheet" href="Style.css"></head>
  <section id="seguridad">
             <h2>Panel de Seguridad</h2>
             <p>Módulo para el personal de seguridad. Permite autorizar el ingreso de vehículos no registrados y registrar visitantes externos.</p>
@@ -20,3 +21,41 @@
                     </div>
                 </form>
             </div>
+            <body><script src="scriptS.js"></script></body>
+            <!-- CONTROL DE ACCESO -->
+<div class="panel-card">
+  <h3>Registrar Acceso</h3>
+  <form id="form-acceso">
+    <label for="seg-placa">Placa:</label>
+    <input type="text" id="seg-placa" maxlength="7" placeholder="Ej: ABC123" required>
+
+    <label for="seg-movimiento">Movimiento:</label>
+    <select id="seg-movimiento">
+      <option value="">-- Seleccione --</option>
+      <option value="entrada">Entrada</option>
+      <option value="salida">Salida</option>
+    </select>
+
+    <button type="submit">Registrar</button>
+    <p id="seg-mensaje" class="seg-mensaje"></p>
+  </form>
+
+  <table>
+    <thead>
+      <tr><th>Placa</th><th>Fecha</th><th>Hora</th><th>Movimiento</th></tr>
+    </thead>
+    <tbody id="tabla-accesos-body"></tbody>
+  </table>
+</div>
+
+<!-- PLACA DESCONOCIDA -->
+<div class="panel-card">
+  <h3>Registrar Placa Desconocida</h3>
+  <form id="form-desconocido">
+    <label for="desc-placa">Placa:</label>
+    <input type="text" id="desc-placa" maxlength="7" placeholder="Ej: STU222" required>
+
+    <label for="desc-motivo">Motivo:</label>
+    <textarea id="desc-motivo" rows="2" placeholder="Ej: Intentó ingresar sin permiso"></textarea>
+
+    <button 

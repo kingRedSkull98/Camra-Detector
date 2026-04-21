@@ -1,4 +1,8 @@
 <!-- SECCIÓN 11: UBICACIÓN -->
+ <head><link rel="stylesheet" href="Style.css">
+</head>
+ <body><script src="scriptU.js">
+</script></body>
         <section id="ubicacion">
             <h2>Ubicación</h2>
             <iframe
@@ -11,5 +15,9 @@
                 title="Ubicación Universidad Libre Cúcuta">
             </iframe>
         </section>
-
+<button type="button" onclick="obtenerUbicacion()">Obtener ubicación</button>
+<p id="estado-ubicacion">Ubicación no solicitada.</p>
+<p>Latitud: <span id="latitud">-</span></p>
+<p>Longitud: <span id="longitud">-</span></p>
+<p>Precisión: <span id="precision">-</span></p>
     </main>

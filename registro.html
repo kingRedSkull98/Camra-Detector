@@ -1,4 +1,4 @@
-<!-- SECCIÓN 3: REGISTRO DE USUARIO -->
+
         <section id="registro-usuario">
             <h2>Registro de Usuario del Parqueadero</h2>
             <p>
@@ -6,6 +6,7 @@
                 y los datos de su vehículo para acceder al parqueadero universitario.
             </p>
             <head> <link rel="stylesheet" href="style.css"> </head>
+            <body> <script src="scriptR.js"></script></body>
 
             <form action="#" method="post">
 
@@ -81,89 +82,4 @@
 
             </form>
         </section>
-        <!-- Inhabilitar vehículo -->
-            <div class="panel-card">
-                <h3> Inhabilitar Vehículo</h3>
-                <form action="#" method="post">
-                    <label for="inh-placa">Placa a inhabilitar:</label>
-                    <input type="text" id="inh-placa" name="placa" placeholder="Ej: JKL654" maxlength="7" required>
-
-                    <label for="inh-motivo">Motivo:</label>
-                    <textarea id="inh-motivo" name="motivo" rows="3" placeholder="Ej: Venció el período académico..."></textarea>
-
-                    <div class="botones">
-                        <button type="submit" class="btn-rojo"> Inhabilitar</button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Carga masiva CSV/XLS -->
-            <div class="panel-card">
-                <h3> Carga Masiva de Usuarios (CSV / XLS)</h3>
-                <p>Cargue un archivo con los datos de los usuarios. El sistema validará la estructura y los campos obligatorios antes de procesar.</p>
-                <form action="#" method="post" enctype="multipart/form-data">
-                    <label for="archivo">Seleccione el archivo:</label>
-                    <input type="file" id="archivo" name="archivo" accept=".csv,.xls,.xlsx" required>
-
-                    <p class="nota"> <strong>Campos requeridos:</strong> Cédula, Nombre completo, Tipo de usuario, Dependencia, Placa, Fecha inicio, Fecha fin.</p>
-
-                    <div class="botones">
-                        <button type="submit"> Cargar archivo</button>
-                    </div>
-                </form>
-
-                <h3> Registro Individual de Usuario</h3>
-                <form action="#" method="post">
-                    <label for="ind-cedula">Cédula:</label>
-                    <input type="text" id="ind-cedula" name="cedula" placeholder="Ej: 1090999888" required>
-
-                    <label for="ind-nombre">Nombre completo:</label>
-                    <input type="text" id="ind-nombre" name="nombre" placeholder="Ej: Luis Rueda" required>
-
-                    <label for="ind-tipo">Tipo de usuario:</label>
-                    <select id="ind-tipo" name="tipo">
-                        <option value="">-- Seleccione --</option>
-                        <option value="estudiante">Estudiante</option>
-                        <option value="docente">Docente</option>
-                        <option value="administrativo">Administrativo</option>
-                        <option value="otro">Otro</option>
-                    </select>
-
-                    <label for="ind-placa">Placa:</label>
-                    <input type="text" id="ind-placa" name="placa" placeholder="Ej: PQR111" maxlength="7" required>
-
-                    <div class="botones">
-                        <button type="submit"> Registrar</button>
-                    </div>
-                </form>
-            </div>
-
-           
-
-        
-
-            <!-- Registrar persona no autorizada -->
-            <div class="panel-card panel-seguridad">
-                <h3> Registrar Persona No Autorizada</h3>
-                <form action="#" method="post">
-                    <label for="vis-nombre">Nombre completo:</label>
-                    <input type="text" id="vis-nombre" name="nombre" placeholder="Ej: Visitante Externo" required>
-
-                    <label for="vis-cedula">Cédula o documento:</label>
-                    <input type="text" id="vis-cedula" name="cedula" placeholder="Ej: 1090000001" required>
-
-                    <label for="vis-placa">Placa del vehículo:</label>
-                    <input type="text" id="vis-placa" name="placa" placeholder="Ej: STU222" maxlength="7" required>
-
-                    <label for="vis-destino">Dependencia a visitar:</label>
-                    <input type="text" id="vis-destino" name="destino" placeholder="Ej: Rectoría">
-
-                    <label for="vis-obs">Observaciones:</label>
-                    <textarea id="vis-obs" name="obs" rows="2" placeholder="Ej: Proveedor de mantenimiento..."></textarea>
-
-                    <div class="botones">
-                        <button type="submit"> Registrar visitante</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+            

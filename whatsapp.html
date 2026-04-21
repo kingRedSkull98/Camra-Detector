@@ -1,0 +1,77 @@
+ <!-- SECCIÓN 8: NOTIFICACIONES WHATSAPP -->
+  <heda><link rel="stylesheet" href="Style.css"> </heda>
+<section id="notificaciones">
+  <h2>Notificaciones por WhatsApp</h2>
+  <p>El sistema envía un mensaje automático al número de WhatsApp registrado cada vez que se detecta el ingreso o salida del vehículo.</p>
+
+  <!-- BURBUJA DEMO -->
+  <div class="whatsapp-demo">
+    <h3>Ejemplo de mensaje enviado</h3>
+    <div class="burbuja-whatsapp">
+      <p><strong>UniLibre Cúcuta — Control Vehicular</strong></p>
+      <p><strong>Fecha:</strong> <span id="demo-fecha">22/03/2026</span></p>
+      <p><strong>Hora:</strong> <span id="demo-hora">07:30 AM</span></p>
+      <p><strong>Placa:</strong> <span id="demo-placa">ABC123</span></p>
+      <p><strong>Evento:</strong> <span id="demo-evento">Ingreso autorizado al campus</span></p>
+      <p>Foto del vehículo adjunta.</p>
+      <p><em>Haz clic en la burbuja para cambiar el ejemplo</em></p>
+    </div>
+  </div>
+
+  <!-- SIMULADOR -->
+  <div class="panel-card">
+    <h3>Simular Notificación</h3>
+
+    <label for="wa-placa">Placa:</label>
+    <input type="text" id="wa-placa" maxlength="7" placeholder="Ej: ABC123">
+
+    <label for="wa-celular">Celular:</label>
+    <input type="text" id="wa-celular" placeholder="Ej: 300 123 4567">
+
+    <label for="wa-evento">Evento:</label>
+    <select id="wa-evento">
+      <option value="">-- Seleccione --</option>
+      <option value="Ingreso autorizado al campus">Ingreso autorizado</option>
+      <option value="Salida del campus registrada">Salida registrada</option>
+      <option value="Acceso no autorizado detectado">Acceso no autorizado</option>
+    </select>
+
+    <button type="button" id="btn-simular-whatsapp">Enviar notificación</button>
+    <p id="wa-mensaje" class="wa-mensaje"></p>
+  </div>
+<body><script src="scriptW.js"></script></body>
+  <!-- HISTORIAL -->
+  <h3>Historial de notificaciones enviadas</h3>
+  <input type="text" id="filtro-historial" placeholder="Filtrar historial...">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Placa</th>
+        <th>Propietario</th>
+        <th>Celular</th>
+        <th>Evento</th>
+        <th>Fecha / Hora</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody id="historial-body">
+      <tr>
+        <td>ABC123</td>
+        <td>Carlos Pérez</td>
+        <td>300 123 4567</td>
+        <td>Ingreso al campus</td>
+        <td>22/03/2026 — 07:30</td>
+        <td> Enviado</td>
+      </tr>
+      <tr>
+        <td>XYZ789</td>
+        <td>María López</td>
+        <td>311 987 6543</td>
+        <td>Salida del campus</td>
+        <td>22/03/2026 — 17:00</td>
+        <td> Enviado</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
