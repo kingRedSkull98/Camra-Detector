@@ -1,0 +1,165 @@
+/* =============================================
+   SEGURIDAD.CSS — Panel Empresa de Seguridad
+   Sistema de Control de Acceso Vehicular
+   Universidad Libre Cúcuta
+============================================= */
+
+#seguridad {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+#seguridad h2 {
+  font-size: 1.5rem;
+  color: #7b1a1a;
+  border-bottom: 3px solid #c0392b;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+#seguridad p {
+  color: #666;
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Alerta de acceso denegado --- */
+.alerta-acceso {
+  background: #fdecea;
+  border: 1.5px solid #e74c3c;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.alerta-acceso .icono-alerta {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+/* --- Formulario autorizar vehículo no registrado --- */
+.form-seguridad label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.form-seguridad input[type="text"],
+.form-seguridad input[type="date"],
+.form-seguridad input[type="time"],
+.form-seguridad textarea,
+.form-seguridad select {
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #e2b6b6;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff8f8;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-seguridad input:focus,
+.form-seguridad textarea:focus,
+.form-seguridad select:focus {
+  outline: none;
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192,57,43,0.1);
+}
+
+/* --- Botones --- */
+.botones-seguridad {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.botones-seguridad button {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-autorizar {
+  background: #1e8449;
+  color: #fff;
+}
+.btn-autorizar:hover {
+  background: #196036;
+  transform: translateY(-1px);
+}
+
+.btn-denegar {
+  background: #c0392b;
+  color: #fff;
+}
+.btn-denegar:hover {
+  background: #a93226;
+  transform: translateY(-1px);
+}
+
+/* --- Historial de autorizaciones manuales --- */
+.historial-seguridad {
+  margin-top: 2rem;
+}
+
+.historial-seguridad h3 {
+  font-size: 1.05rem;
+  color: #7b1a1a;
+  border-left: 4px solid #c0392b;
+  padding-left: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.historial-seguridad table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.historial-seguridad thead th {
+  background: #c0392b;
+  color: #fff;
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.historial-seguridad tbody tr {
+  border-bottom: 1px solid #f5d6d6;
+  transition: background 0.15s;
+}
+
+.historial-seguridad tbody tr:hover {
+  background: #fff5f5;
+}
+
+.historial-seguridad tbody td {
+  padding: 0.55rem 0.7rem;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  #seguridad { padding: 1rem; margin: 1rem; }
+  .botones-seguridad { flex-direction: column; }
+  .botones-seguridad button { width: 100%; }
+}

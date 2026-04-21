@@ -1,0 +1,195 @@
+/* =============================================
+   REPORTE.CSS — Sección Reportes y Estadísticas
+   Sistema de Control de Acceso Vehicular
+   Universidad Libre Cúcuta
+============================================= */
+
+/* --- Panel de generar reporte --- */
+.panel-card {
+  background: #f8faff;
+  border: 1px solid #dce4f0;
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+  margin: 2rem auto;
+  max-width: 720px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.panel-card h3 {
+  font-size: 1.1rem;
+  color: #1a3c6e;
+  margin-bottom: 1rem;
+  border-left: 4px solid #1a3c6e;
+  padding-left: 0.5rem;
+}
+
+.panel-card h4 {
+  font-size: 1rem;
+  color: #1a3c6e;
+  margin: 1.4rem 0 0.7rem;
+}
+
+.panel-card label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.panel-card input[type="date"] {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #c8d4e8;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.panel-card input[type="date"]:focus {
+  outline: none;
+  border-color: #1a3c6e;
+  box-shadow: 0 0 0 3px rgba(26,60,110,0.1);
+}
+
+/* --- Radio de formato --- */
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: #444;
+}
+
+/* --- Botón generar --- */
+.botones {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.botones button {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #1a3c6e;
+  color: #fff;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.botones button:hover {
+  background: #14305a;
+  transform: translateY(-1px);
+}
+
+/* --- Vista previa tabla reporte --- */
+.panel-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin-top: 0.5rem;
+}
+
+.panel-card thead th {
+  background: #2c5090;
+  color: #fff;
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.panel-card tbody tr {
+  border-bottom: 1px solid #e0e8f4;
+  transition: background 0.15s;
+}
+
+.panel-card tbody tr:hover {
+  background: #eef2fb;
+}
+
+.panel-card tbody td {
+  padding: 0.55rem 0.7rem;
+  color: #333;
+}
+
+/* --- Sección estadísticas --- */
+#reportes {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+#reportes h2 {
+  font-size: 1.5rem;
+  color: #1a3c6e;
+  border-bottom: 3px solid #1a3c6e;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+#reportes p {
+  color: #666;
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Cards de estadísticas --- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.stat {
+  background: linear-gradient(135deg, #1a3c6e 0%, #2c5090 100%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 1.4rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(26,60,110,0.2);
+  transition: transform 0.2s;
+}
+
+.stat:hover {
+  transform: translateY(-3px);
+}
+
+.stat h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.02em;
+}
+
+.stat p {
+  font-size: 0.88rem;
+  opacity: 0.88;
+  margin: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .panel-card {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
