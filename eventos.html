@@ -1,5 +1,28 @@
  <!-- SECCIÓN 7: REGISTRO DE EVENTOS -->
   <head> <link rel="stylesheet" href="Style.css"></head>
+  <script>
+fetch('eventos.php')
+    .then(res => res.json())
+    .then(data => {
+        const tbody = document.getElementById('tabla-eventos');
+        if (data.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="7">No hay eventos registrados.</td></tr>';
+            return;
+        }
+        data.forEach(e => {
+            tbody.innerHTML += `
+                <tr>
+                    <td>${e.placa}</td>
+                    <td>${e.fecha}</td>
+                    <td>${e.hora}</td>
+                    <td>${e.movimiento}</td>
+                    <td class="${e.clase_css}">${e.estado_label}</td>
+                    <td>${e.foto_placa ? '<a href="' + e.foto_placa + '" target="_blank">📷 Ver foto</a>' : '—'}</td>
+                    <td>${e.whatsapp_enviado}</td>
+                </tr>`;
+        });
+    });
+</script>
         <section id="eventos">
             <h2>Historial de Eventos de Acceso</h2>
             <p>Registro completo de todos los eventos: vehículos autorizados, sin permiso, placas no registradas y autorizaciones manuales de seguridad.</p>
@@ -19,53 +42,11 @@
                     </tr>
                 </thead>
                 <body><script src="scriptE.js"></script></body>
-                <tbody>
-                    <tr>
-                        <td>ABC123</td>
-                        <td>22/03/2026</td>
-                        <td>07:30</td>
-                        <td>Entrada</td>
-                        <td class="autorizado"> Autorizado</td>
-                        <td> foto_001.jpg</td>
-                        <td> Enviado</td>
-                    </tr>
-                    <tr>
-                        <td>JKL654</td>
-                        <td>22/03/2026</td>
-                        <td>08:02</td>
-                        <td>Entrada</td>
-                        <td class="inhabilitado"> Sin permiso</td>
-                        <td> foto_002.jpg</td>
-                        <td> Alerta</td>
-                    </tr>
-                    <tr>
-                        <td>ZZZ999</td>
-                        <td>22/03/2026</td>
-                        <td>09:15</td>
-                        <td>Entrada</td>
-                        <td class="no-registrado"> No registrada</td>
-                        <td>📷 foto_003.jpg</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>STU222</td>
-                        <td>22/03/2026</td>
-                        <td>10:00</td>
-                        <td>Entrada</td>
-                        <td class="pendiente"> Por seguridad</td>
-                        <td>📷 foto_004.jpg</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>XYZ789</td>
-                        <td>22/03/2026</td>
-                        <td>17:00</td>
-                        <td>Salida</td>
-                        <td class="autorizado"> Autorizado</td>
-                        <td> foto_005.jpg</td>
-                        <td> Enviado</td>
-                    </tr>
-                </tbody>
+    
+                   <tbody id="tabla-eventos">
+    <!-- cargado dinámicamente -->
+</tbody>
+                
             </table>
         </section>
         <section id="eventos">

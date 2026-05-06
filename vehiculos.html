@@ -1,4 +1,27 @@
-      <section id="vehiculos">
+     <script>
+fetch('vehiculos.php')
+    .then(res => res.json())
+    .then(data => {
+        const tbody = document.getElementById('tabla-vehiculos');
+        if (data.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="7">No hay vehículos registrados.</td></tr>';
+            return;
+        }
+        data.forEach(v => {
+            tbody.innerHTML += `
+                <tr>
+                    <td>${v.placa}</td>
+                    <td>${v.nombre ?? v.cedula_usuario}</td>
+                    <td>${v.tipo_vehiculo}</td>
+                    <td>${v.marca} ${v.linea ?? ''}</td>
+                    <td>${v.programa ?? '—'}</td>
+                    <td>${v.fecha_fin ?? '—'}</td>
+                    <td class="${v.estado}">${v.estado}</td>
+                </tr>`;
+        });
+    });
+</script>
+     <section id="vehiculos">
             <h2>Vehículos Registrados en el Sistema</h2>
             <p>Tabla de vehículos con permisos activos, pendientes e inhabilitados en el campus.</p>
             <head>
@@ -20,51 +43,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>ABC123</td>
-                        <td>Carlos Pérez</td>
-                        <td>Automóvil</td>
-                        <td>Chevrolet Spark</td>
-                        <td>Docentes</td>
-                        <td>31/12/2026</td>
-                        <td class="autorizado"> Autorizado</td>
-                    </tr>
-                    <tr>
-                        <td>XYZ789</td>
-                        <td>María López</td>
-                        <td>Motocicleta</td>
-                        <td>Honda CB190</td>
-                        <td>Administrativos</td>
-                        <td>30/06/2026</td>
-                        <td class="autorizado"> Autorizado</td>
-                    </tr>
-                    <tr>
-                        <td>DEF456</td>
-                        <td>Juan García</td>
-                        <td>Camioneta</td>
-                        <td>Renault Duster</td>
-                        <td>Estudiantes</td>
-                        <td>15/03/2026</td>
-                        <td class="pendiente"> Pendiente</td>
-                    </tr>
-                    <tr>
-                        <td>GHI321</td>
-                        <td>Ana Martínez</td>
-                        <td>Automóvil</td>
-                        <td>Mazda 2</td>
-                        <td>Docentes</td>
-                        <td>31/12/2026</td>
-                        <td class="autorizado"> Autorizado</td>
-                    </tr>
-                    <tr>
-                        <td>JKL654</td>
-                        <td>Pedro Sánchez</td>
-                        <td>Motocicleta</td>
-                        <td>Yamaha FZ</td>
-                        <td>Estudiantes</td>
-                        <td>01/01/2026</td>
-                        <td class="inhabilitado"> Inhabilitado</td>
-                    </tr>
+                 <tbody id="tabla-vehiculos">
+                    
+                 </tbody>
                 </tbody>
             </table>
         </section>

@@ -7,7 +7,7 @@
             <!-- Habilitar vehículo -->
             <div class="panel-card">
                 <h3> Habilitar Vehículo</h3>
-                <form action="#" method="post">
+               <form action="habilitar_vehiculo.php" method="post">
                     <label for="adm-placa">Placa del vehículo:</label>
                     <input type="text" id="adm-placa" name="placa" placeholder="Ej: MNO987" maxlength="7" required>
 
@@ -26,7 +26,7 @@
             <div class="panel-card">
                 <h3> Carga Masiva de Usuarios (CSV / XLS)</h3>
                 <p>Cargue un archivo con los datos de los usuarios. El sistema validará la estructura y los campos obligatorios antes de procesar.</p>
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="cargar_csv.php" method="post" enctype="multipart/form-data">
                     <label for="archivo">Seleccione el archivo:</label>
                     <input type="file" id="archivo" name="archivo" accept=".csv,.xls,.xlsx" required>
 
@@ -39,7 +39,7 @@
                  <body><script src="scriptA.js"></script></body>
 
                 <h3> Registro Individual de Usuario</h3>
-                <form action="#" method="post">
+                <form action="registro_individual.php" method="post">
                     <label for="ind-cedula">Cédula:</label>
                     <input type="text" id="ind-cedula" name="cedula" placeholder="Ej: 1090999888" required>
 

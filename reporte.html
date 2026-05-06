@@ -28,7 +28,7 @@
       </div>
     </form>
 
-    <p id="mensaje-vacio">⚠️ No se encontraron registros en ese rango de fechas.</p>
+    <p id="mensaje-vacio"> No se encontraron registros en ese rango de fechas.</p>
 
     <h4>Vista previa del reporte</h4>
     <table id="tabla-reporte">
@@ -54,10 +54,9 @@
   <h2>Reportes y Estadísticas</h2>
   <p>Resumen general de actividad vehicular registrada en el sistema.</p>
   <div class="stats">
-    <div class="stat"><h3 id="total-vehiculos">0</h3><p>Vehículos registrados</p></div>
-    <div class="stat"><h3 id="ingresos-hoy">0</h3><p>Ingresos hoy</p></div>
-    <div class="stat"><h3>5</h3><p>Accesos no autorizados</p></div>
-    <div class="stat"><h3>142</h3><p>Notificaciones enviadas</p></div>
+    
+<div class="stat"><h3 id="no-autorizados">0</h3><p>Accesos no autorizados</p></div>
+<div class="stat"><h3 id="notificaciones">0</h3><p>Notificaciones enviadas</p></div>
   </div>
 </section>
 
@@ -69,19 +68,25 @@
 <script>
 
 
-  // =============================================
+  
   // ACTUALIZAR ESTADÍSTICAS AL CARGAR
-  // =============================================
-  const placasUnicas = [...new Set(registros.map(r => r.placa))];
-  document.getElementById("total-vehiculos").textContent = placasUnicas.length;
+  
+ let registros = [];
 
-  const hoy = new Date().toISOString().split("T")[0];
-  const ingresosHoy = registros.filter(r => r.fecha === hoy && r.movimiento === "Entrada").length;
-  document.getElementById("ingresos-hoy").textContent = ingresosHoy;
+// Cargar datos reales desde PHP
+fetch('reporte.php?stats=1')
+    .then(res => res.json())
+    .then(data => {
+        registros = data.registros;
+        document.getElementById("total-vehiculos").textContent = data.total_vehiculos;
+        document.getElementById("ingresos-hoy").textContent = data.ingresos_hoy;
+        document.getElementById("no-autorizados").textContent = data.no_autorizados;
+        document.getElementById("notificaciones").textContent = data.notificaciones;
+    });
 
-  // =============================================
+  
   // LÓGICA DEL FORMULARIO
-  // =============================================
+  
   document.getElementById("form-reporte").addEventListener("submit", function(e) {
     e.preventDefault(); // ← ESTO evita que la página se recargue
 
@@ -130,9 +135,9 @@
     }
   });
 
-  // =============================================
+  
   // EXPORTAR A EXCEL
-  // =============================================
+  
   function exportarExcel(datos) {
     const filas = datos.map(r => ({
       "Placa": r.placa,
@@ -148,9 +153,9 @@
     XLSX.writeFile(libro, "reporte_accesos.xlsx");
   }
 
-  // =============================================
+  
   // EXPORTAR A PDF
-  // =============================================
+ 
   function exportarPDF(datos, desde, hasta) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
