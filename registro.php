@@ -1,72 +1,63 @@
 <?php
-require_once 'config/db.php';
+require_once "config/db.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $cedula       = trim($_POST['cedula']);
-    $whatsapp     = trim($_POST['celular']);
-    $tipo_usuario = trim($_POST['tipo-usuario']);
-    $programa     = trim($_POST['programa'] ?? '');
-    $fecha_inicio = trim($_POST['fecha-inicio']);
-    $fecha_fin    = trim($_POST['fecha-fin']);
-    $acepto       = isset($_POST['terminos']) ? 1 : 0;
 
-    $placa        = strtoupper(trim($_POST['placa']));
-    $marca        = trim($_POST['marca']);
-    $clase        = trim($_POST['clase']); // moto, carro, camioneta, otro
+    $cedula          = $_POST['cedula'] ?? '';
+    $email           = $_POST['email'] ?? '';
+    $celular         = $_POST['celular'] ?? '';
+    $tipo_usuario    = $_POST['tipo-usuario'] ?? '';
+    $programa        = $_POST['programa'] ?? '';
+    $acepto_terminos = isset($_POST['acepto_terminos']) ? 1 : 0;
+    $fecha_inicio    = $_POST['fecha-inicio'] ?? '';
+    $fecha_fin       = $_POST['fecha-fin'] ?? '';
+    $placa           = strtoupper($_POST['placa'] ?? '');
+    $marca           = $_POST['marca'] ?? '';
+    $tipo_vehiculo   = $_POST['tipo-vehiculo'] ?? '';
 
-    if (!$acepto) {
-        header("Location: registro.html?error=terminos"); exit;
-    }
-
-    // Verificar['fecha-inicio']);
-    $fecha_finonn->prepare("SELECT cedula FROM usuarios WHERE cedula = ?");
+    // Verificar si cédula ya existe
+    $check = $conn->prepare("SELECT cedula FROM usuarios WHERE cedula = ?");
     $check->bind_param("s", $cedula);
     $check->execute();
     $check->store_result();
     if ($check->num_rows > 0) {
-        header("Location: registro.html?error=cedula_existe"); exit;
+        header("Location: registro.html?error=cedula_existe");
+        exit;
     }
     $check->close();
 
-    // Verifica['fecha-inicio']);
-    $fecha_finconn->prepare("SELECT placa FROM vehiculos WHERE placa = ?");
+    // Verificar si placa ya existe
+    $checkP = $conn->prepare("SELECT placa FROM vehiculos WHERE placa = ?");
     $checkP->bind_param("s", $placa);
     $checkP->execute();
     $checkP->store_result();
     if ($checkP->num_rows > 0) {
-        header("Loca['fecha-inicio']);
-    $fecha_finxiste"); exit;
+        header("Location: registro.html?error=placa_existe");
+        exit;
     }
     $checkP->close();
 
-    // Insertar en tabla usuarios
-    // Insertar en tabla usuarios
-$stmtU = $conn->prepare("
-    INSERT INTO usuarios (cedula, whatsapp, tipo_usuario, programa, acepto_terminos, fecha_inicio, fecha_fin, estado)
-    VALUES (?, ?, ?, ?, ?, ?, ?, 'inactivo')
-");
-$stmtU->bind_param("sssssss", $cedula, $celular, $tipo_usuario, $programa, $acepto_terminos, $fecha_inicio, $fecha_fin);
-$stmtU->execute();
-$stmtU->close();
-
-// Insertar en tabla vehiculos
-$stmtV = $conn->prepare("
-    INSERT INTO vehiculos (cedula_usuario, placa, marca, fecha_inicio, fecha_fin, estado)
-    VALUES (?, ?, ?, ?, ?, 'pendiente')
-");
-$stmtV->bind_param("sssss", $cedula, $placa, $marca, $fecha_inicio, $fecha_fin);
-
-if ($stmtV->execute()) {
-    header("Location: registro.html?ok=1");
-} else {
-    header("Location: registro.html?error=vehiculo");
-}
-        $stmtV->close();
-    } else {
-        header("Location: registro.html?error=usuario");
-    }
-
+    // Insertar usuario
+    $stmtU = $conn->prepare("INSERT INTO usuarios (cedula, email, whatsapp, tipo_usuario, programa, acepto_terminos, fecha_inicio, fecha_fin, estado) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'inactivo')");
+    $stmtU->bind_param("sssssiss", $cedula, $email, $celular, $tipo_usuario, $programa, $acepto_terminos, $fecha_inicio, $fecha_fin);
+    $stmtU->execute();
     $stmtU->close();
+
+    // Insertar vehículo
+    $stmtV = $conn->prepare("INSERT INTO vehiculos (cedula_usuario, placa, marca, tipo_vehiculo, fecha_inicio, fecha_fin, estado) VALUES (?, ?, ?, ?, ?, ?, 'pendiente')");
+    $stmtV->bind_param("ssssss", $cedula, $placa, $marca, $tipo_vehiculo, $fecha_inicio, $fecha_fin);
+
+    if ($stmtV->execute()) {
+        header("Location: registro.html?ok=1");
+    } else {
+        header("Location: registro.html?error=vehiculo");
+    }
+    $stmtV->close();
     $conn->close();
+
+} else {
+    header("Location: registro.html");
 }
 ?>
